@@ -95,7 +95,7 @@ public class Homepage extends Basepage {
         // Search
         searchBar.press("Enter");
 
-        Allure.step("clicked enter button");
+        Allure.step("clicked enter button.");
 
         page.waitForLoadState();
 
