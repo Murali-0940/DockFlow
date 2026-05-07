@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [packautomation]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="com.listeners.AllureListener"/>
+  </listeners>
+  <test thread-count="5" name="Alfadock Login Test(failed)" verbose="0">
+    <classes>
+      <class name="testclasses.HomepageTest">
+        <methods>
+          <include name="companyLogin"/>
+          <include name="verifydwgfileSearch"/>
+          <include name="teardown"/>
+          <include name="verifya3dfileSearch"/>
+          <include name="verifyfileSearch"/>
+          <include name="verifydxfleSearch"/>
+          <include name="verifycsvfileSearch"/>
+          <include name="verifya3dprtfileSearch"/>
+          <include name="verifytiffileSearch"/>
+          <include name="userLogin"/>
+          <include name="verifydocxfileSearch"/>
+          <include name="verifyjpgfileSearch"/>
+          <include name="verifyHomepage"/>
+          <include name="verifyxlsxfileSearch"/>
+          <include name="setup"/>
+          <include name="verifypptxfileSearch"/>
+          <include name="verifyattributesearch"/>
+        </methods>
+      </class> <!-- testclasses.HomepageTest -->
+    </classes>
+  </test> <!-- Alfadock Login Test(failed) -->
+</suite> <!-- Failed suite [packautomation] -->

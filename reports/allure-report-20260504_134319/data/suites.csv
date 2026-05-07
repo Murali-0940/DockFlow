@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"Verify that all required icons and links are visible on the main dashboard.","4066","Verify Homepage Icons","Default Suite","2026-05-04","passed","2026-05-04","testclasses.HomepageTest","TestNGTest-a4959ed7-04a3-4ac8-9231-a70c19edd4b6","testclasses.HomepageTest","verifyHomepage"
+"verify user login","152","userLogin","Default Suite","2026-05-04","passed","2026-05-04","testclasses.HomepageTest","TestNGTest-a4959ed7-04a3-4ac8-9231-a70c19edd4b6","testclasses.HomepageTest","userLogin"
+"Verify that the search bar is working and the result is loading.","7147","Search in searchbar","Default Suite","2026-05-04","passed","2026-05-04","testclasses.HomepageTest","TestNGTest-a4959ed7-04a3-4ac8-9231-a70c19edd4b6","testclasses.HomepageTest","verifyfileSearch"
+"verify company login","1586","CompanyLogin","Default Suite","2026-05-04","passed","2026-05-04","testclasses.HomepageTest","TestNGTest-a4959ed7-04a3-4ac8-9231-a70c19edd4b6","testclasses.HomepageTest","companyLogin"

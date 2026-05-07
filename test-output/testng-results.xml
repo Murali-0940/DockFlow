@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-04T11:28:25 IST" name="Default suite" finished-at="2026-05-04T11:28:42 IST" duration-ms="16954">
+    <groups>
+    </groups>
+    <test started-at="2026-05-04T11:28:25 IST" name="Default test" finished-at="2026-05-04T11:28:42 IST" duration-ms="16954">
+      <class name="testclasses.HomepageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:10 IST" name="setup" finished-at="2026-05-04T11:28:25 IST" duration-ms="15225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="companyLogin()[pri:1, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:25 IST" name="companyLogin" description="CompanyLogin" finished-at="2026-05-04T11:28:27 IST" duration-ms="2149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- companyLogin -->
+        <test-method signature="userLogin()[pri:2, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:28 IST" name="userLogin" description="userLogin" finished-at="2026-05-04T11:28:28 IST" duration-ms="148" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userLogin -->
+        <test-method signature="verifyHomepage()[pri:3, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:28 IST" name="verifyHomepage" description="Verify Homepage Icons" finished-at="2026-05-04T11:28:34 IST" duration-ms="6450" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepage -->
+        <test-method signature="verifyPDFSearch()[pri:4, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:34 IST" name="verifyPDFSearch" description="Search in searchbar" finished-at="2026-05-04T11:28:42 IST" duration-ms="7885" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPDFSearch -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:42 IST" name="teardown" finished-at="2026-05-04T11:28:43 IST" duration-ms="300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- testclasses.HomepageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
