@@ -134,7 +134,7 @@ public class HomepageTest extends Basepage {
     @Description("Verify that the attribute search is working and the result is loading.")
     public void attributesearch() {
         homepage = new Homepage(page);
-        homepage.searchUsingFilter("20260317163148.pdf", "Attributes");
+        homepage.searchUsingFilter("20260317163148", "Attributes");
     }
 
     @Test(priority = 16, description = "content search in searchdropdown")

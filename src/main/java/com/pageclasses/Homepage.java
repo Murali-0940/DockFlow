@@ -11,12 +11,16 @@ import base.Basepage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
+import org.openqa.selenium.WebDriver;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 
 public class Homepage extends Basepage {
 
+    public WebDriver driver;
+
     public Homepage(Page page) {
+        Homepage.page = page;
     }
 
     // Locators
@@ -34,7 +38,9 @@ public class Homepage extends Basepage {
 
     private static final String SEARCHBAR = "//input[@placeholder='Search']";
 
-    private static final String SEARCHICON = "//img[contains(@src,'ai-search.png')]/..";
+    private static final String SEARCHDROPDOWN = SEARCHBAR + "/following::button[@icon='fa-caret-down'][1]";
+
+    private static final String SEARCHICON = SEARCHBAR + "/following::img[contains(@src,'ai-search')][1]";
 
     private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
 
@@ -108,9 +114,40 @@ public class Homepage extends Basepage {
         alfadocklogo();
     }
 
-    Locator fileNameChkBox = page.locator("text=Filename");
-    Locator attributesChkBox = page.locator("text=Attributes");
-    Locator contentChkBox = page.locator("text=Content");
+    private static final String FILENAME_FILTER = "//label[normalize-space()='Filename']";
+    private static final String ATTRIBUTES_FILTER = "//label[normalize-space()='Attributes']";
+    private static final String CONTENT_FILTER = "//label[normalize-space()='Content']";
+
+    private boolean isSearchFilterEnabled(String filterLabel) {
+
+        Locator label = page.locator(filterLabel);
+
+        label.waitFor();
+
+        String inputId = (String) label.evaluate("element => element.getAttribute('for')");
+
+        if (inputId == null || inputId.isBlank()) {
+            return label.locator("xpath=..").locator("svg").isVisible();
+        }
+
+        return (boolean) page.locator("#" + inputId).evaluate("element => element.checked");
+    }
+
+    private void clickSearchFilter(String filterLabel) {
+
+        Locator label = page.locator(filterLabel);
+
+        label.waitFor();
+
+        String inputId = (String) label.evaluate("element => element.getAttribute('for')");
+
+        if (inputId == null || inputId.isBlank()) {
+            label.evaluate("element => element.click()");
+            return;
+        }
+
+        page.locator("#" + inputId).evaluate("element => element.click()");
+    }
 
     public void selectSearchFilter(String filterName) {
 
@@ -119,20 +156,20 @@ public class Homepage extends Basepage {
             case "filename":
 
                 // Enable Filename if not enabled
-                if (!fileNameChkBox.locator("svg").isVisible()) {
-                    fileNameChkBox.click();
+                if (!isSearchFilterEnabled(FILENAME_FILTER)) {
+                    clickSearchFilter(FILENAME_FILTER);
                     Allure.step("Filename checkbox enabled");
                 }
 
                 // Disable Attributes if enabled
-                if (attributesChkBox.locator("svg").isVisible()) {
-                    attributesChkBox.click();
+                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                    clickSearchFilter(ATTRIBUTES_FILTER);
                     Allure.step("Attributes checkbox disabled");
                 }
 
                 // Disable Content if enabled
-                if (contentChkBox.locator("svg").isVisible()) {
-                    contentChkBox.click();
+                if (isSearchFilterEnabled(CONTENT_FILTER)) {
+                    clickSearchFilter(CONTENT_FILTER);
                     Allure.step("Content checkbox disabled");
                 }
 
@@ -141,20 +178,20 @@ public class Homepage extends Basepage {
             case "attributes":
 
                 // Enable Attributes
-                if (!attributesChkBox.locator("svg").isVisible()) {
-                    attributesChkBox.click();
+                if (!isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                    clickSearchFilter(ATTRIBUTES_FILTER);
                     Allure.step("Attributes checkbox enabled");
                 }
 
                 // Disable Filename
-                if (fileNameChkBox.locator("svg").isVisible()) {
-                    fileNameChkBox.click();
+                if (isSearchFilterEnabled(FILENAME_FILTER)) {
+                    clickSearchFilter(FILENAME_FILTER);
                     Allure.step("Filename checkbox disabled");
                 }
 
                 // Disable Content
-                if (contentChkBox.locator("svg").isVisible()) {
-                    contentChkBox.click();
+                if (isSearchFilterEnabled(CONTENT_FILTER)) {
+                    clickSearchFilter(CONTENT_FILTER);
                     Allure.step("Content checkbox disabled");
                 }
 
@@ -163,20 +200,20 @@ public class Homepage extends Basepage {
             case "content":
 
                 // Enable Content
-                if (!contentChkBox.locator("svg").isVisible()) {
-                    contentChkBox.click();
+                if (!isSearchFilterEnabled(CONTENT_FILTER)) {
+                    clickSearchFilter(CONTENT_FILTER);
                     Allure.step("Content checkbox enabled");
                 }
 
                 // Disable Filename
-                if (fileNameChkBox.locator("svg").isVisible()) {
-                    fileNameChkBox.click();
+                if (isSearchFilterEnabled(FILENAME_FILTER)) {
+                    clickSearchFilter(FILENAME_FILTER);
                     Allure.step("Filename checkbox disabled");
                 }
 
                 // Disable Attributes
-                if (attributesChkBox.locator("svg").isVisible()) {
-                    attributesChkBox.click();
+                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                    clickSearchFilter(ATTRIBUTES_FILTER);
                     Allure.step("Attributes checkbox disabled");
                 }
 
@@ -185,6 +222,30 @@ public class Homepage extends Basepage {
             default:
                 throw new IllegalArgumentException("Invalid filter name: " + filterName);
         }
+    }
+
+    private void clickSearchIcon() {
+
+        Locator searchIcon = page.locator(SEARCHICON).first();
+
+        searchIcon.waitFor();
+
+        searchIcon.scrollIntoViewIfNeeded();
+
+        searchIcon.evaluate("element => (element.closest('button, a, [role=\"button\"]') || element).click()");
+
+        Allure.step("Clicked search icon");
+    }
+
+    private void openSearchDropdown() {
+
+        Locator searchDropdown = page.locator(SEARCHDROPDOWN).first();
+
+        searchDropdown.waitFor();
+
+        searchDropdown.evaluate("element => element.click()");
+
+        Allure.step("Opened search dropdown");
     }
 
     @Step("Filename Search")
@@ -205,22 +266,16 @@ public class Homepage extends Basepage {
         Allure.step("Entered attribute search text : " + fileName);
 
         // Dropdown
-        Locator searchBarDropdown = page
-                .locator("//button[@icon='fa-caret-down']//span[contains(@class,'fa-caret-down')]");
+        page.waitForTimeout(2000);
 
-        searchBarDropdown.evaluate("element => element.click()");
+        openSearchDropdown();
+
         page.waitForTimeout(2000);
 
         selectSearchFilter("filename");
 
         // Search icon
-        Locator searchIcon = page.locator(SEARCHICON);
-
-        searchIcon.waitFor();
-
-        searchIcon.click();
-
-        Allure.step("Clicked search icon");
+        clickSearchIcon();
 
         page.waitForLoadState();
 
@@ -258,11 +313,7 @@ public class Homepage extends Basepage {
         // Step 2 - Open Dropdown
         // ==========================================
 
-        Locator searchBarDropdown = page.locator("//span[normalize-space()='ui-btn']");
-
-        searchBarDropdown.evaluate("element => element.click()");
-
-        Allure.step("Opened search dropdown");
+        openSearchDropdown();
 
         page.waitForTimeout(2000);
 
@@ -278,11 +329,7 @@ public class Homepage extends Basepage {
         // Step 4 - Click Search Icon
         // ==========================================
 
-        Locator searchIcon = page.locator(SEARCHICON);
-
-        searchIcon.evaluate("element => element.click()");
-
-        Allure.step("Clicked search icon");
+        clickSearchIcon();
 
         page.waitForLoadState();
 
