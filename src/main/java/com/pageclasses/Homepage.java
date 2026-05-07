@@ -208,8 +208,7 @@ public class Homepage extends Basepage {
         Locator searchBarDropdown = page
                 .locator("//button[@icon='fa-caret-down']//span[contains(@class,'fa-caret-down')]");
 
-        searchBarDropdown.dispatchEvent("click");
-
+        searchBarDropdown.evaluate("element => element.click()");
         page.waitForTimeout(2000);
 
         selectSearchFilter("filename");
