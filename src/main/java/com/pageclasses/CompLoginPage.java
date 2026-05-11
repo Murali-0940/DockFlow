@@ -12,9 +12,9 @@ public class CompLoginPage extends Basepage {
     }
 
     // Locators
-    private static final String COMP_USER = "//input[@id='username']";
-    private static final String COMP_PASS = "//input[@id='password']";
-    private static final String COMP_LOGIN = "//button[@id='logmein']";
+    private static final String COMP_USER = "xpath=//input[@id='username']";
+    private static final String COMP_PASS = "xpath=//input[@id='password']";
+    private static final String COMP_LOGIN = "xpath=//button[@id='logmein']";
 
     @Step("Select language: {lang}")
     public void selectlang(String lang) {

@@ -58,19 +58,20 @@ public class AllureListener implements ITestListener {
                 "cmd.exe", "/c",
                 "allure generate " + RESULTS_DIR + " --output " + reportDir + " --clean"
             );
-            generate.inheritIO();
+            generate.redirectErrorStream(true);
+            generate.redirectOutput(ProcessBuilder.Redirect.DISCARD);
             Process genProcess = generate.start();
             genProcess.waitFor(); // wait for generation to complete
 
             System.out.println("✅ Allure report saved to: " + reportDir);
 
-            // Open the report in the browser
-            ProcessBuilder open = new ProcessBuilder(
-                "cmd.exe", "/c",
-                "allure open " + reportDir
-            );
-            open.inheritIO();
-            open.start(); // don't wait — this starts the server and keeps it alive
+            if (Boolean.getBoolean("allure.open.report")) {
+                ProcessBuilder open = new ProcessBuilder(
+                    "cmd.exe", "/c",
+                    "allure open " + reportDir
+                );
+                open.start();
+            }
 
         } catch (Exception e) {
             System.out.println("⚠️  Could not generate/open Allure report: " + e.getMessage());

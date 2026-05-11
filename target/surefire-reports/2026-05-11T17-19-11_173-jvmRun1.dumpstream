@@ -1,0 +1,6 @@
+# Created at 2026-05-11T17:27:18.533
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Failed to install browsers'.
+
+# Created at 2026-05-11T17:27:19.044
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Error: EPERM: operation not permitted, mkdir 'C:\Users\DELL\AppData\Local\ms-playwright\__dirlock''.
+

@@ -34,11 +34,12 @@ public class Rough extends Basepage {
         userlogin.clickUserLoginButton();
     }
 
-    @Test(priority = 3, description = "Filename Search in searchdropdown")
-    @Description("Verify that the attribute search is working and the result is loading.")
-    public void verifyFilenameSearch() {
+    @Test(priority = 4, description = "Search using File Checkbox")
+    @Description("Verify that the file checkbox search is working and the result is loading.")
+    public void verifyFileCheckboxSearch() {
         homepage = new Homepage(page);
-        homepage.filenamesearch("20260317163148.pdf");
+        homepage.searchUsingFilter("20260317163148.pdf", "filename");
+
     }
 
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
@@ -127,9 +128,20 @@ public class Basepage {
 
     public Page openFirstSearchResult() {
 
-        Locator firstResult = page.locator("(//div[@class='imageDiv'])[1]");
+        Locator firstResult = page.locator("xpath=(//div[@class='imageDiv'])[1]");
 
-        firstResult.waitFor();
+        // Check for results with a short timeout before committing
+        try {
+            firstResult.waitFor(
+                    new Locator.WaitForOptions()
+                            .setState(WaitForSelectorState.VISIBLE)
+                            .setTimeout(10000));
+        } catch (TimeoutError e) {
+            attachScreenshot("No Search Results");
+            Allure.step("⚠️ No search results found on page: " + page.url());
+            System.out.println("⚠️ No search results found : " + page.url());
+            return null;
+        }
 
         attachScreenshot("Search Results");
 
@@ -226,7 +238,7 @@ public class Basepage {
 
     public void alfadocklogo() {
 
-        String ALFADOCKLOGO = "//img[contains(@src,'logo')]";
+        String ALFADOCKLOGO = "xpath=//img[contains(@src,'logo')]";
 
         click(ALFADOCKLOGO);
 
@@ -250,7 +262,7 @@ public class Basepage {
 
     public void selectOption(String value) {
 
-        String lang = "//select[@id='mySelect']";
+        String lang = "xpath=//select[@id='mySelect']";
 
         Locator langSelector = page.locator(lang);
 

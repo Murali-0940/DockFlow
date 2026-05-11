@@ -127,7 +127,7 @@ public class HomepageTest extends Basepage {
     @Description("Verify that the attribute search is working and the result is loading.")
     public void verifyFilenameSearch() {
         homepage = new Homepage(page);
-        homepage.filenamesearch("20260317163148.pdf");
+        homepage.searchUsingFilter("20260317163148.pdf", "Filename");
     }
 
     @Test(priority = 15, description = "attributes search in searchdropdown")
@@ -141,7 +141,7 @@ public class HomepageTest extends Basepage {
     @Description("Verify that the content search is working and the result is loading.")
     public void contentserch() {
         homepage = new Homepage(page);
-        homepage.searchUsingFilter("test", "Content");
+        homepage.searchUsingFilter("upload", "Content");
     }
 
 }

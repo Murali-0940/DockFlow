@@ -1,0 +1,102 @@
+# Created at 2026-05-11T15:55:35.876
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Failed to install browsers'.
+
+# Created at 2026-05-11T15:55:36.499
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Error: EPERM: operation not permitted, mkdir 'C:\Users\DELL\AppData\Local\ms-playwright\__dirlock''.
+
+# Created at 2026-05-11T15:55:37.210
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if "Windows_NT" == "Windows_NT" setlocal'.
+
+# Created at 2026-05-11T15:55:37.211
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set DIRNAME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\ '.
+
+# Created at 2026-05-11T15:55:37.212
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if "C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\" == "" set DIRNAME=. '.
+
+# Created at 2026-05-11T15:55:37.213
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_BASE_NAME=allure '.
+
+# Created at 2026-05-11T15:55:37.214
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_HOME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\.. '.
+
+# Created at 2026-05-11T15:55:37.215
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>for %i in ("C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\..") do set APP_HOME=%~fi '.
+
+# Created at 2026-05-11T15:55:37.215
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_HOME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist '.
+
+# Created at 2026-05-11T15:55:37.217
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set DEFAULT_JVM_OPTS= '.
+
+# Created at 2026-05-11T15:55:37.217
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if defined JAVA_HOME goto findJavaFromJavaHome '.
+
+# Created at 2026-05-11T15:55:37.218
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set JAVA_HOME=C:\Program Files\Java\jdk-21 '.
+
+# Created at 2026-05-11T15:55:37.219
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set JAVA_EXE=C:\Program Files\Java\jdk-21/bin/java.exe '.
+
+# Created at 2026-05-11T15:55:37.220
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if exist "C:\Program Files\Java\jdk-21/bin/java.exe" goto execute '.
+
+# Created at 2026-05-11T15:55:37.220
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set CLASSPATH=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\*;C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\config '.
+
+# Created at 2026-05-11T15:55:46.509
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>"C:\Program Files\Java\jdk-21/bin/java.exe"     -classpath "C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\*;C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\config" io.qameta.allure.CommandLine "generate" "reports/allure-results" "--output" "reports/allure-report-20260511_155536" "--clean" '.
+
+# Created at 2026-05-11T15:55:46.547
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Report successfully generated to reports\allure-report-20260511_155536'.
+
+# Created at 2026-05-11T15:55:46.549
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if 0 EQU 0 goto mainEnd '.
+
+# Created at 2026-05-11T15:55:46.584
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if "Windows_NT" == "Windows_NT" endlocal'.
+
+# Created at 2026-05-11T15:55:46.793
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if "Windows_NT" == "Windows_NT" setlocal'.
+
+# Created at 2026-05-11T15:55:46.794
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set DIRNAME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\ '.
+
+# Created at 2026-05-11T15:55:46.795
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if "C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\" == "" set DIRNAME=. '.
+
+# Created at 2026-05-11T15:55:46.795
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_BASE_NAME=allure '.
+
+# Created at 2026-05-11T15:55:46.797
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_HOME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\.. '.
+
+# Created at 2026-05-11T15:55:46.797
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>for %i in ("C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\bin\..") do set APP_HOME=%~fi '.
+
+# Created at 2026-05-11T15:55:46.799
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set APP_HOME=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist '.
+
+# Created at 2026-05-11T15:55:46.799
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set DEFAULT_JVM_OPTS= '.
+
+# Created at 2026-05-11T15:55:46.801
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if defined JAVA_HOME goto findJavaFromJavaHome '.
+
+# Created at 2026-05-11T15:55:46.801
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set JAVA_HOME=C:\Program Files\Java\jdk-21 '.
+
+# Created at 2026-05-11T15:55:46.804
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set JAVA_EXE=C:\Program Files\Java\jdk-21/bin/java.exe '.
+
+# Created at 2026-05-11T15:55:46.805
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>if exist "C:\Program Files\Java\jdk-21/bin/java.exe" goto execute '.
+
+# Created at 2026-05-11T15:55:46.806
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>set CLASSPATH=C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\*;C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\config '.
+
+# Created at 2026-05-11T15:55:47.244
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'D:\DockVS\DockFullFlow>"C:\Program Files\Java\jdk-21/bin/java.exe"     -classpath "C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\*;C:\Users\DELL\AppData\Local\nvm\v20.20.1\node_modules\allure-commandline\dist\lib\config" io.qameta.allure.CommandLine "open" "reports/allure-report-20260511_155536" '.
+
+# Created at 2026-05-11T15:55:47.908
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Starting web server...'.
+

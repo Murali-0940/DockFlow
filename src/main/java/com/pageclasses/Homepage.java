@@ -6,348 +6,347 @@ package com.pageclasses;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-
 import base.Basepage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 import org.openqa.selenium.WebDriver;
+
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 
 public class Homepage extends Basepage {
 
-    public WebDriver driver;
+        public WebDriver driver;
 
-    public Homepage(Page page) {
-        Homepage.page = page;
-    }
-
-    // Locators
-    private static final String HYPERLINK = "//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
-
-    private static final String DRAWINGMGMT = "//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
-
-    private static final String SOFTWARELIB = "//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
-
-    private static final String ALFAOFFICE = "//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
-
-    private static final String ALFACALENDER = "//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
-
-    private static final String SETTINGS = "//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
-
-    private static final String SEARCHBAR = "//input[@placeholder='Search']";
-
-    private static final String SEARCHDROPDOWN = SEARCHBAR + "/following::button[@icon='fa-caret-down'][1]";
-
-    private static final String SEARCHICON = SEARCHBAR + "/following::img[contains(@src,'ai-search')][1]";
-
-    private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
-
-    private static final String ALFADOCKLOGO = "//img[contains(@src,'logo')]";
-
-    // ==========================================
-    // Homepage Icon Validation
-    // ==========================================
-
-    @Step("Verify Homepage Icons")
-    public void homepageiconcheck() {
-
-        page.waitForLoadState();
-
-        String[] locators = {
-                HYPERLINK,
-                DRAWINGMGMT,
-                SOFTWARELIB,
-                ALFAOFFICE,
-                ALFACALENDER,
-                SETTINGS,
-                SEARCHBAR,
-                SEARCHICON,
-                LOGOUTICON,
-                ALFADOCKLOGO
-        };
-
-        for (String locator : locators) {
-
-            assertThat(page.locator(locator)).isVisible();
-
-            Allure.step("Verified icon : " + locator);
-        }
-    }
-
-    // ==========================================
-    // File Search
-    // ==========================================
-
-    @Step("Search File")
-    public void searchfileinsearchbar(String fileName) {
-
-        Locator searchBar = page.locator(SEARCHBAR);
-
-        searchBar.waitFor();
-
-        // Remove readonly
-        searchBar.evaluate("element => element.removeAttribute('readonly')");
-
-        // Click
-        searchBar.evaluate("element => element.click()");
-
-        // Fill value
-        searchBar.fill(fileName);
-
-        Allure.step("Entered file name : " + fileName);
-
-        // Search
-        searchBar.press("Enter");
-
-        Allure.step("clicked enter button.");
-
-        page.waitForLoadState();
-
-        Page viewerPage = openFirstSearchResult();
-
-        validateViewerPage(viewerPage);
-
-        closeViewerAndReturn(viewerPage);
-
-        alfadocklogo();
-    }
-
-    private static final String FILENAME_FILTER = "//label[normalize-space()='Filename']";
-    private static final String ATTRIBUTES_FILTER = "//label[normalize-space()='Attributes']";
-    private static final String CONTENT_FILTER = "//label[normalize-space()='Content']";
-
-    private boolean isSearchFilterEnabled(String filterLabel) {
-
-        Locator label = page.locator(filterLabel);
-
-        label.waitFor();
-
-        String inputId = (String) label.evaluate("element => element.getAttribute('for')");
-
-        if (inputId == null || inputId.isBlank()) {
-            return label.locator("xpath=..").locator("svg").isVisible();
+        public Homepage(Page page) {
+                Homepage.page = page;
         }
 
-        return (boolean) page.locator("#" + inputId).evaluate("element => element.checked");
-    }
+        // Locators
+        private static final String HYPERLINK = "//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
 
-    private void clickSearchFilter(String filterLabel) {
+        private static final String DRAWINGMGMT = "//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
 
-        Locator label = page.locator(filterLabel);
+        private static final String SOFTWARELIB = "//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
 
-        label.waitFor();
+        private static final String ALFAOFFICE = "//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
 
-        String inputId = (String) label.evaluate("element => element.getAttribute('for')");
+        private static final String ALFACALENDER = "//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
 
-        if (inputId == null || inputId.isBlank()) {
-            label.evaluate("element => element.click()");
-            return;
+        private static final String SETTINGS = "//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
+
+        private static final String SEARCHBAR = "//input[@placeholder='Search']";
+
+        private static final String SEARCHDROPDOWN = SEARCHBAR + "/following::button[@icon='fa-caret-down'][1]";
+
+        private static final String SEARCHICON = SEARCHBAR + "/following::img[contains(@src,'ai-search')][1]";
+
+        private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
+
+        private static final String ALFADOCKLOGO = "//img[contains(@src,'logo')]";
+
+        // ==========================================
+        // Homepage Icon Validation
+        // ==========================================
+
+        @Step("Verify Homepage Icons")
+        public void homepageiconcheck() {
+
+                page.waitForLoadState();
+
+                String[] locators = {
+                                HYPERLINK,
+                                DRAWINGMGMT,
+                                SOFTWARELIB,
+                                ALFAOFFICE,
+                                ALFACALENDER,
+                                SETTINGS,
+                                SEARCHBAR,
+                                SEARCHICON,
+                                LOGOUTICON,
+                                ALFADOCKLOGO
+                };
+
+                for (String locator : locators) {
+
+                        assertThat(page.locator(locator)).isVisible();
+
+                        Allure.step("Verified icon : " + locator);
+                }
         }
 
-        page.locator("#" + inputId).evaluate("element => element.click()");
-    }
+        // ==========================================
+        // File Search
+        // ==========================================
 
-    public void selectSearchFilter(String filterName) {
+        @Step("Search File")
+        public void searchfileinsearchbar(String fileName) {
 
-        switch (filterName.toLowerCase()) {
+                Locator searchBar = page.locator(SEARCHBAR);
 
-            case "filename":
+                searchBar.waitFor();
 
-                // Enable Filename if not enabled
-                if (!isSearchFilterEnabled(FILENAME_FILTER)) {
-                    clickSearchFilter(FILENAME_FILTER);
-                    Allure.step("Filename checkbox enabled");
-                }
+                // Remove readonly
+                searchBar.evaluate("element => element.removeAttribute('readonly')");
 
-                // Disable Attributes if enabled
-                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                    clickSearchFilter(ATTRIBUTES_FILTER);
-                    Allure.step("Attributes checkbox disabled");
-                }
+                // Click
+                searchBar.evaluate("element => element.click()");
 
-                // Disable Content if enabled
-                if (isSearchFilterEnabled(CONTENT_FILTER)) {
-                    clickSearchFilter(CONTENT_FILTER);
-                    Allure.step("Content checkbox disabled");
-                }
+                // Fill value
+                searchBar.fill(fileName);
 
-                break;
+                Allure.step("Entered file name : " + fileName);
 
-            case "attributes":
+                // Search
+                searchBar.press("Enter");
 
-                // Enable Attributes
-                if (!isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                    clickSearchFilter(ATTRIBUTES_FILTER);
-                    Allure.step("Attributes checkbox enabled");
-                }
+                Allure.step("clicked enter button.");
 
-                // Disable Filename
-                if (isSearchFilterEnabled(FILENAME_FILTER)) {
-                    clickSearchFilter(FILENAME_FILTER);
-                    Allure.step("Filename checkbox disabled");
-                }
+                page.waitForLoadState();
 
-                // Disable Content
-                if (isSearchFilterEnabled(CONTENT_FILTER)) {
-                    clickSearchFilter(CONTENT_FILTER);
-                    Allure.step("Content checkbox disabled");
-                }
+                Page viewerPage = openFirstSearchResult();
 
-                break;
+                validateViewerPage(viewerPage);
 
-            case "content":
+                closeViewerAndReturn(viewerPage);
 
-                // Enable Content
-                if (!isSearchFilterEnabled(CONTENT_FILTER)) {
-                    clickSearchFilter(CONTENT_FILTER);
-                    Allure.step("Content checkbox enabled");
-                }
-
-                // Disable Filename
-                if (isSearchFilterEnabled(FILENAME_FILTER)) {
-                    clickSearchFilter(FILENAME_FILTER);
-                    Allure.step("Filename checkbox disabled");
-                }
-
-                // Disable Attributes
-                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                    clickSearchFilter(ATTRIBUTES_FILTER);
-                    Allure.step("Attributes checkbox disabled");
-                }
-
-                break;
-
-            default:
-                throw new IllegalArgumentException("Invalid filter name: " + filterName);
+                alfadocklogo();
         }
-    }
 
-    private void clickSearchIcon() {
+        private static final String FILENAME_FILTER = "//label[normalize-space()='Filename']";
+        private static final String ATTRIBUTES_FILTER = "//label[normalize-space()='Attributes']";
+        private static final String CONTENT_FILTER = "//label[normalize-space()='Content']";
 
-        Locator searchIcon = page.locator(SEARCHICON).first();
+        private boolean isSearchFilterEnabled(String filterLabel) {
 
-        searchIcon.waitFor();
+                Locator label = page.locator(filterLabel);
 
-        searchIcon.scrollIntoViewIfNeeded();
+                label.waitFor();
 
-        searchIcon.evaluate("element => (element.closest('button, a, [role=\"button\"]') || element).click()");
+                String inputId = (String) label.evaluate("element => element.getAttribute('for')");
 
-        Allure.step("Clicked search icon");
-    }
+                if (inputId == null || inputId.isBlank()) {
+                        return label.locator("xpath=..").locator("svg").isVisible();
+                }
 
-    private void openSearchDropdown() {
+                return (boolean) page.locator("#" + inputId).evaluate("element => element.checked");
+        }
 
-        Locator searchDropdown = page.locator(SEARCHDROPDOWN).first();
+        private void clickSearchFilter(String filterLabel) {
 
-        searchDropdown.waitFor();
+                Locator label = page.locator(filterLabel);
 
-        searchDropdown.evaluate("element => element.click()");
+                label.waitFor();
 
-        Allure.step("Opened search dropdown");
-    }
+                String inputId = (String) label.evaluate("element => element.getAttribute('for')");
 
-    @Step("Filename Search")
-    public void filenamesearch(String fileName) {
+                if (inputId == null || inputId.isBlank()) {
+                        label.evaluate("element => element.click()");
+                        return;
+                }
 
-        Locator searchBar = page.locator(SEARCHBAR);
+                page.locator("#" + inputId).evaluate("element => element.click()");
+        }
 
-        searchBar.waitFor();
+        public void selectSearchFilter(String filterName) {
 
-        // Click
-        searchBar.click();
+                switch (filterName.toLowerCase()) {
 
-        page.waitForTimeout(2000);
+                        case "filename":
 
-        // Fill
-        searchBar.fill(fileName);
+                                // Enable Filename if not enabled
+                                if (!isSearchFilterEnabled(FILENAME_FILTER)) {
+                                        clickSearchFilter(FILENAME_FILTER);
+                                        Allure.step("Filename checkbox enabled");
+                                }
 
-        Allure.step("Entered attribute search text : " + fileName);
+                                // Disable Attributes if enabled
+                                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                                        clickSearchFilter(ATTRIBUTES_FILTER);
+                                        Allure.step("Attributes checkbox disabled");
+                                }
 
-        // Dropdown
-        page.waitForTimeout(2000);
+                                // Disable Content if enabled
+                                if (isSearchFilterEnabled(CONTENT_FILTER)) {
+                                        clickSearchFilter(CONTENT_FILTER);
+                                        Allure.step("Content checkbox disabled");
+                                }
 
-        openSearchDropdown();
+                                break;
 
-        page.waitForTimeout(2000);
+                        case "attributes":
 
-        selectSearchFilter("filename");
+                                // Enable Attributes
+                                if (!isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                                        clickSearchFilter(ATTRIBUTES_FILTER);
+                                        Allure.step("Attributes checkbox enabled");
+                                }
 
-        // Search icon
-        clickSearchIcon();
+                                // Disable Filename
+                                if (isSearchFilterEnabled(FILENAME_FILTER)) {
+                                        clickSearchFilter(FILENAME_FILTER);
+                                        Allure.step("Filename checkbox disabled");
+                                }
 
-        page.waitForLoadState();
+                                // Disable Content
+                                if (isSearchFilterEnabled(CONTENT_FILTER)) {
+                                        clickSearchFilter(CONTENT_FILTER);
+                                        Allure.step("Content checkbox disabled");
+                                }
 
-        Page viewerPage = openFirstSearchResult();
+                                break;
 
-        validateViewerPage(viewerPage);
+                        case "content":
 
-        closeViewerAndReturn(viewerPage);
+                                // Enable Content
+                                if (!isSearchFilterEnabled(CONTENT_FILTER)) {
+                                        clickSearchFilter(CONTENT_FILTER);
+                                        Allure.step("Content checkbox enabled");
+                                }
 
-        alfadocklogo();
-    }
+                                // Disable Filename
+                                if (isSearchFilterEnabled(FILENAME_FILTER)) {
+                                        clickSearchFilter(FILENAME_FILTER);
+                                        Allure.step("Filename checkbox disabled");
+                                }
 
-    @Step("Search File Using Filter")
-    public void searchUsingFilter(String fileName, String filterName) {
+                                // Disable Attributes
+                                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+                                        clickSearchFilter(ATTRIBUTES_FILTER);
+                                        Allure.step("Attributes checkbox disabled");
+                                }
 
-        // ==========================================
-        // Step 1 - Search Bar
-        // ==========================================
+                                break;
 
-        Locator searchBar = page.locator(SEARCHBAR);
+                        default:
+                                throw new IllegalArgumentException("Invalid filter name: " + filterName);
+                }
+        }
 
-        searchBar.waitFor();
+        private void clickSearchIcon() {
 
-        // Click search bar
-        searchBar.click();
+                Locator searchIcon = page.locator(SEARCHICON).first();
 
-        page.waitForTimeout(2000);
+                searchIcon.waitFor();
 
-        // Enter filename
-        searchBar.fill(fileName);
+                searchIcon.scrollIntoViewIfNeeded();
 
-        Allure.step("Entered search text : " + fileName);
+                searchIcon.evaluate("element => (element.closest('button, a, [role=\"button\"]') || element).click()");
 
-        // ==========================================
-        // Step 2 - Open Dropdown
-        // ==========================================
+                Allure.step("Clicked search icon");
+        }
 
-        openSearchDropdown();
+        private void openSearchDropdown() {
 
-        page.waitForTimeout(2000);
+                Locator searchDropdown = page.locator(SEARCHDROPDOWN).first();
 
-        // ==========================================
-        // Step 3 - Select Filter
-        // ==========================================
+                searchDropdown.waitFor();
 
-        selectSearchFilter(filterName);
+                searchDropdown.evaluate("element => element.click()");
 
-        page.waitForTimeout(3000);
+                Allure.step("Opened search dropdown");
+        }
 
-        // ==========================================
-        // Step 4 - Click Search Icon
-        // ==========================================
+        @Step("Filename Search")
+        public void filenamesearch(String fileName) {
 
-        clickSearchIcon();
+                Locator searchBar = page.locator(SEARCHBAR);
 
-        page.waitForLoadState();
+                searchBar.waitFor();
 
-        // ==========================================
-        // Step 5 - Open Search Result
-        // ==========================================
+                // Click
+                searchBar.click();
 
-        Page viewerPage = openFirstSearchResult();
+                page.waitForTimeout(2000);
 
-        validateViewerPage(viewerPage);
+                // Fill
+                searchBar.fill(fileName);
 
-        closeViewerAndReturn(viewerPage);
+                Allure.step("Entered attribute search text : " + fileName);
 
-        // ==========================================
-        // Step 6 - Navigate Homepage
-        // ==========================================
+                // Dropdown
+                page.waitForTimeout(2000);
 
-        alfadocklogo();
-    }
+                openSearchDropdown();
 
+                page.waitForTimeout(2000);
+
+                selectSearchFilter("filename");
+
+                // Search icon
+                clickSearchIcon();
+
+                page.waitForLoadState();
+
+                Page viewerPage = openFirstSearchResult();
+
+                validateViewerPage(viewerPage);
+
+                closeViewerAndReturn(viewerPage);
+
+                alfadocklogo();
+        }
+
+        @Step("Search File Using Filter")
+        public void searchUsingFilter(String fileName, String filterName) {
+
+                // ==========================================
+                // Step 1 - Search Bar
+                // ==========================================
+
+                Locator searchBar = page.locator(SEARCHBAR);
+
+                searchBar.waitFor();
+
+                // Click search bar
+                searchBar.click();
+
+                page.waitForTimeout(2000);
+
+                // Enter filename
+                searchBar.fill(fileName);
+
+                Allure.step("Entered search text : " + fileName);
+
+                // ==========================================
+                // Step 2 - Open Dropdown
+                // ==========================================
+
+                openSearchDropdown();
+
+                page.waitForTimeout(2000);
+
+                // ==========================================
+                // Step 3 - Select Filter
+                // ==========================================
+
+                selectSearchFilter(filterName);
+
+                page.waitForTimeout(3000);
+
+                // ==========================================
+                // Step 4 - Click Search Icon
+                // ==========================================
+
+                clickSearchIcon();
+
+                page.waitForLoadState();
+
+                // ==========================================
+                // Step 5 - Open Search Result
+                // ==========================================
+
+                Page viewerPage = openFirstSearchResult();
+
+                validateViewerPage(viewerPage);
+
+                closeViewerAndReturn(viewerPage);
+
+                // ==========================================
+                // Step 6 - Navigate Homepage
+                // ==========================================
+
+                alfadocklogo();
+        }
 }
