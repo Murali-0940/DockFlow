@@ -349,4 +349,122 @@ public class Homepage extends Basepage {
 
                 alfadocklogo();
         }
+
+        @Step("Search File Using Filter")
+        public void searchUsingFileInSearchDropdown(String fileName) {
+                // Click search bar
+                page.locator(SEARCHBAR).click();
+
+                // Enter filename
+                page.locator(SEARCHBAR).fill(fileName);
+
+                Allure.step("Entered search text : " + fileName);
+
+                // Open Dropdown
+                openSearchDropdown();
+
+                page.waitForTimeout(2000);
+
+                // Select File or Folder
+                selectFileCheckboxInSearchDropdown();
+
+                page.waitForTimeout(3000);
+
+                // Click Search Icon
+                clickSearchIcon();
+
+                page.waitForLoadState();
+
+                // Open Search Result
+                Page viewerPage = openFirstSearchResult();
+
+                validateViewerPage(viewerPage);
+
+                closeViewerAndReturn(viewerPage);
+
+                // Navigate Homepage
+                alfadocklogo();
+
+        }
+
+        @Step("Search folder Using Filter")
+        public void searchUsingFolderInSearchDropdown(String fileName) {
+                // Click search bar
+                page.locator(SEARCHBAR).click();
+
+                // Enter filename
+                page.locator(SEARCHBAR).fill(fileName);
+
+                Allure.step("Entered search text : " + fileName);
+
+                // Open Dropdown
+                openSearchDropdown();
+
+                page.waitForTimeout(2000);
+
+                // Select File or Folder
+                selectFolderCheckboxInSearchDropdown();
+
+                page.waitForTimeout(3000);
+
+                // Click Search Icon
+                clickSearchIcon();
+
+                page.waitForLoadState();
+
+                // Open Search Result
+                Page viewerPage = openFirstSearchResult();
+
+                validateViewerPage(viewerPage);
+
+                closeViewerAndReturn(viewerPage);
+
+                // Navigate Homepage
+                alfadocklogo();
+
+        }
+
+        String filecheckbox = "//p-checkbox[@value='File']//div[contains(@class,'ui-chkbox-box')]";
+
+        private void selectFileCheckboxInSearchDropdown() {
+
+                Locator checkbox = page.locator(filecheckbox);
+
+                checkbox.waitFor();
+
+                String classes = checkbox.getAttribute("class");
+
+                if (!classes.contains("ui-state-active")) {
+
+                        checkbox.click();
+
+                        Allure.step("File checkbox selected in search dropdown");
+
+                } else {
+
+                        Allure.step("File checkbox already selected");
+                }
+        }
+
+        String foldercheckbox = "//p-checkbox[@value='Folder']//div[contains(@class,'ui-chkbox-box')]";
+
+        private void selectFolderCheckboxInSearchDropdown() {
+
+                Locator checkbox = page.locator(foldercheckbox);
+
+                checkbox.waitFor();
+
+                String classes = checkbox.getAttribute("class");
+
+                if (!classes.contains("ui-state-active")) {
+
+                        checkbox.click();
+
+                        Allure.step("Folder checkbox selected in search dropdown");
+
+                } else {
+
+                        Allure.step("Folder checkbox already selected");
+                }
+        }
 }

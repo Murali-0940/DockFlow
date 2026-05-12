@@ -134,7 +134,7 @@ public class HomepageTest extends Basepage {
     @Description("Verify that the attribute search is working and the result is loading.")
     public void attributesearch() {
         homepage = new Homepage(page);
-        homepage.searchUsingFilter("20260317163148", "Attributes");
+        homepage.searchUsingFilter("attributetest", "Attributes");
     }
 
     @Test(priority = 16, description = "content search in searchdropdown")
@@ -142,6 +142,20 @@ public class HomepageTest extends Basepage {
     public void contentserch() {
         homepage = new Homepage(page);
         homepage.searchUsingFilter("upload", "Content");
+    }
+
+    @Test(priority = 17, description = "Search using File Checkbox")
+    @Description("Verify that the file checkbox search is working and the result is loading.")
+    public void verifyFileCheckboxSearch() {
+        homepage = new Homepage(page);
+        homepage.searchUsingFileInSearchDropdown("20260317163148.pdf");
+    }
+
+    @Test(priority = 18, description = "Search using Folder Checkbox")
+    @Description("Verify that the folder checkbox search is working and the result is loading.")
+    public void verifyFolderCheckboxSearch() {
+        homepage = new Homepage(page);
+        homepage.searchUsingFolderInSearchDropdown("20260317163148.pdf");
     }
 
 }
