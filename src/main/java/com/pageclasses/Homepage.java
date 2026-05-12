@@ -323,7 +323,7 @@ public class Homepage extends Basepage {
 
                 selectSearchFilter(filterName);
 
-                page.waitForTimeout(3000);
+                page.waitForTimeout(1000);
 
                 // ==========================================
                 // Step 4 - Click Search Icon
