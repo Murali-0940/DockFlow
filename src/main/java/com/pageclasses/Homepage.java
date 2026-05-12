@@ -6,9 +6,15 @@ package com.pageclasses;
 
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.LoadState;
+import com.microsoft.playwright.options.WaitForSelectorState;
+
 import base.Basepage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import org.openqa.selenium.WebDriver;
 
@@ -23,56 +29,83 @@ public class Homepage extends Basepage {
                 Homepage.page = page;
         }
 
+        // ==========================================
         // Locators
-        private static final String HYPERLINK = "//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
+        // ==========================================
 
-        private static final String DRAWINGMGMT = "//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
+        private static final String HYPERLINK = "xpath=//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
 
-        private static final String SOFTWARELIB = "//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
+        private static final String DRAWINGMGMT = "xpath=//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
 
-        private static final String ALFAOFFICE = "//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
+        private static final String SOFTWARELIB = "xpath=//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
 
-        private static final String ALFACALENDER = "//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
+        private static final String ALFAOFFICE = "xpath=//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
 
-        private static final String SETTINGS = "//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
+        private static final String ALFACALENDER = "xpath=//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
 
-        private static final String SEARCHBAR = "//input[@placeholder='Search']";
+        private static final String SETTINGS = "xpath=//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
 
-        private static final String SEARCHDROPDOWN = SEARCHBAR + "/following::button[@icon='fa-caret-down'][1]";
+        private static final String SEARCHBAR = "input[placeholder='Search']";
 
-        private static final String SEARCHICON = SEARCHBAR + "/following::img[contains(@src,'ai-search')][1]";
+        private static final String SEARCHICON = "xpath=(//img[contains(@src,'ai-search')])[1]";
 
         private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
 
-        private static final String ALFADOCKLOGO = "//img[contains(@src,'logo')]";
+        private static final String ALFADOCKLOGO = "img[src*='logo']";
+
+        private static final String SEARCHDROPDOWN = "xpath=//input[@placeholder='Search']/following::button[@icon='fa-caret-down'][1]";
 
         // ==========================================
         // Homepage Icon Validation
         // ==========================================
 
         @Step("Verify Homepage Icons")
-        public void homepageiconcheck() {
+        public void verifyHomepageIcons() {
 
-                page.waitForLoadState();
+                page.waitForLoadState(LoadState.DOMCONTENTLOADED);
 
-                String[] locators = {
-                                HYPERLINK,
-                                DRAWINGMGMT,
-                                SOFTWARELIB,
-                                ALFAOFFICE,
-                                ALFACALENDER,
-                                SETTINGS,
-                                SEARCHBAR,
-                                SEARCHICON,
-                                LOGOUTICON,
-                                ALFADOCKLOGO
-                };
+                Map<String, String> homepageIcons = new LinkedHashMap<>();
 
-                for (String locator : locators) {
+                homepageIcons.put("HyperLink", HYPERLINK);
+                homepageIcons.put("Drawing Management", DRAWINGMGMT);
+                homepageIcons.put("Software Library", SOFTWARELIB);
+                homepageIcons.put("alfa Office", ALFAOFFICE);
+                homepageIcons.put("alfaCalendar", ALFACALENDER);
+                homepageIcons.put("Settings", SETTINGS);
+                homepageIcons.put("Search Bar", SEARCHBAR);
+                homepageIcons.put("Search Icon", SEARCHICON);
+                homepageIcons.put("Logout Icon", LOGOUTICON);
+                homepageIcons.put("alfaDOCK Logo", ALFADOCKLOGO);
 
-                        assertThat(page.locator(locator)).isVisible();
+                for (Map.Entry<String, String> entry : homepageIcons.entrySet()) {
 
-                        Allure.step("Verified icon : " + locator);
+                        String elementName = entry.getKey();
+                        String locatorValue = entry.getValue();
+
+                        Locator element = page.locator(locatorValue);
+
+                        try {
+
+                                element.waitFor(new Locator.WaitForOptions()
+                                                .setState(WaitForSelectorState.VISIBLE)
+                                                .setTimeout(10000));
+
+                                assertThat(element).isVisible();
+
+                                Allure.step("Verified : " + elementName);
+
+                                System.out.println("Verified : " + elementName);
+
+                        } catch (Exception e) {
+
+                                Allure.step("Failed : " + elementName);
+
+                                System.out.println("Failed : " + elementName);
+
+                                throw new RuntimeException(
+                                                "Homepage element not visible : " + elementName,
+                                                e);
+                        }
                 }
         }
 

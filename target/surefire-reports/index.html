@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 4 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-packautomation" class="navigator-link">
-              <span class="suite-name border-failed">packautomation</span>
+              <span class="suite-name border-passed">packautomation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,36 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods, 4 failed,   15 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-packautomation" class="hide-methods failed suite-packautomation"> (hide)</a> <!-- hide-methods failed suite-packautomation -->
-                      <a href="#" panel-name="suite-packautomation" class="show-methods failed suite-packautomation"> (show)</a> <!-- show-methods failed suite-packautomation -->
-                    </span>
-                    <div class="method-list-content failed suite-packautomation">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="attributesearch">attributesearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyFileCheckboxSearch">verifyFileCheckboxSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyFolderCheckboxSearch">verifyFolderCheckboxSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyfileSearch">verifyfileSearch</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-packautomation -->
+                    <span class="method-stats">15 methods,   15 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -133,11 +104,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="companyLogin">companyLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="contentserch">contentserch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -187,6 +153,11 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyfileSearch">verifyfileSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyjpgfileSearch">verifyjpgfileSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -217,1838 +188,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-packautomation" class="panel packautomation">
-          <div class="suite-packautomation-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testclasses.HomepageTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="attributesearch">
-                  </a> <!-- attributesearch -->
-                  <span class="method-name">attributesearch</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.waitForLoadState()&quot; because &quot;viewerPage&quot; is null
-	at base.Basepage.validateViewerPage(Basepage.java:171)
-	at com.pageclasses.Homepage.searchUsingFilter(Homepage.java:342)
-	at testclasses.HomepageTest.attributesearch(HomepageTest.java:137)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(attributes search in searchdropdown)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyFileCheckboxSearch">
-                  </a> <!-- verifyFileCheckboxSearch -->
-                  <span class="method-name">verifyFileCheckboxSearch</span>
-                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\progress.js:78:26)
-    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\frames.js:1007:23)
-    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\frameDispatcher.js:158:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//p-checkbox[@value=&apos;File&apos;]//div[contains(@class,&apos;ui-chkbox-box&apos;)]&quot;)
--   locator resolved to &lt;div class=&quot;ui-chkbox-box ui-widget ui-corner-all ui-…&gt;…&lt;/div&gt;
-- attempting click action
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #1
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #2
--   waiting 20ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #3
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #4
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #5
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #6
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #7
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #8
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #9
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #10
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #11
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #12
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #13
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #14
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #15
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #16
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #17
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #18
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #19
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #20
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #21
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #22
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #23
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #24
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #25
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #26
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #27
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #28
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #29
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #30
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #31
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #32
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #33
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #34
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #35
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #36
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #37
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #38
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #39
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #40
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #41
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #42
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #43
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #44
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #45
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #46
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #47
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #48
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #49
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #50
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #51
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #52
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #53
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #54
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #55
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #56
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #57
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #58
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #59
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #60
--   waiting 500ms
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
-	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
-	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
-	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
-	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
-	at com.microsoft.playwright.Locator.click(Locator.java:2468)
-	at com.pageclasses.Homepage.selectFileCheckboxInSearchDropdown(Homepage.java:439)
-	at com.pageclasses.Homepage.searchUsingFileInSearchDropdown(Homepage.java:369)
-	at testclasses.HomepageTest.verifyFileCheckboxSearch(HomepageTest.java:151)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\progress.js:78:26)
-    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\frames.js:1007:23)
-    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\frameDispatcher.js:158:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//p-checkbox[@value=&apos;File&apos;]//div[contains(@class,&apos;ui-chkbox-box&apos;)]&quot;)
--   locator resolved to &lt;div class=&quot;ui-chkbox-box ui-widget ui-corner-all ui-…&gt;…&lt;/div&gt;
-- attempting click action
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #1
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #2
--   waiting 20ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #3
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #4
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #5
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #6
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #7
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #8
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #9
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #10
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #11
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #12
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #13
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #14
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #15
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #16
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #17
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #18
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #19
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #20
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #21
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #22
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #23
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #24
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #25
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #26
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #27
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #28
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #29
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #30
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #31
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #32
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #33
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #34
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #35
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #36
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #37
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #38
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #39
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #40
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #41
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #42
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #43
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #44
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #45
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #46
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #47
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #48
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #49
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #50
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #51
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #52
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #53
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #54
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #55
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #56
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #57
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #58
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #59
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #60
--   waiting 500ms
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
-	... 44 more
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Search using File Checkbox)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyFolderCheckboxSearch">
-                  </a> <!-- verifyFolderCheckboxSearch -->
-                  <span class="method-name">verifyFolderCheckboxSearch</span>
-                  <div class="stack-trace">com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\progress.js:78:26)
-    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\frames.js:1007:23)
-    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\frameDispatcher.js:158:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//p-checkbox[@value=&apos;Folder&apos;]//div[contains(@class,&apos;ui-chkbox-box&apos;)]&quot;)
--   locator resolved to &lt;div class=&quot;ui-chkbox-box ui-widget ui-corner-all ui-…&gt;…&lt;/div&gt;
-- attempting click action
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #1
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #2
--   waiting 20ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #3
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #4
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #5
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #6
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #7
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #8
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #9
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #10
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #11
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #12
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #13
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #14
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #15
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #16
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #17
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #18
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #19
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #20
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #21
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #22
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #23
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #24
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #25
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #26
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #27
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #28
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #29
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #30
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #31
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #32
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #33
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #34
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #35
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #36
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #37
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #38
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #39
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #40
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #41
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #42
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #43
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #44
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #45
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #46
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #47
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #48
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #49
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #50
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #51
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #52
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #53
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #54
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #55
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #56
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #57
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #58
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #59
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
-
-	at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:120)
-	at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:130)
-	at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:106)
-	at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:252)
-	at com.microsoft.playwright.impl.FrameImpl.lambda$click$8(FrameImpl.java:243)
-	at com.microsoft.playwright.impl.LoggingSupport.lambda$withLogging$0(LoggingSupport.java:36)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:47)
-	at com.microsoft.playwright.impl.ChannelOwner.withLogging(ChannelOwner.java:89)
-	at com.microsoft.playwright.impl.LoggingSupport.withLogging(LoggingSupport.java:35)
-	at com.microsoft.playwright.impl.FrameImpl.click(FrameImpl.java:243)
-	at com.microsoft.playwright.impl.LocatorImpl.click(LocatorImpl.java:160)
-	at com.microsoft.playwright.Locator.click(Locator.java:2468)
-	at com.pageclasses.Homepage.selectFolderCheckboxInSearchDropdown(Homepage.java:461)
-	at com.pageclasses.Homepage.searchUsingFolderInSearchDropdown(Homepage.java:406)
-	at testclasses.HomepageTest.verifyFolderCheckboxSearch(HomepageTest.java:158)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message=&apos;Timeout 30000ms exceeded.
-  name=&apos;TimeoutError
-  stack=&apos;TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\progress.js:78:26)
-    at Frame.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\frames.js:1007:23)
-    at FrameDispatcher.click (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\frameDispatcher.js:158:30)
-    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:94:40)
-    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-17308481682878090713\package\lib\server\dispatchers\dispatcher.js:361:39)
-}
-Call log:
-- waiting for locator(&quot;//p-checkbox[@value=&apos;Folder&apos;]//div[contains(@class,&apos;ui-chkbox-box&apos;)]&quot;)
--   locator resolved to &lt;div class=&quot;ui-chkbox-box ui-widget ui-corner-all ui-…&gt;…&lt;/div&gt;
-- attempting click action
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #1
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #2
--   waiting 20ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #3
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #4
--   waiting 100ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #5
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #6
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #7
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #8
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #9
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #10
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #11
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #12
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #13
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #14
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #15
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #16
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #17
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #18
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #19
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #20
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #21
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #22
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #23
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #24
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #25
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #26
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #27
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #28
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #29
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #30
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #31
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #32
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #33
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #34
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #35
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #36
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #37
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #38
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #39
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #40
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #41
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #42
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #43
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #44
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #45
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #46
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #47
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #48
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #49
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #50
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #51
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #52
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #53
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #54
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #55
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #56
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #57
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #58
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
--   done scrolling
--   &lt;div class=&quot;ui-g-4&quot; _ngcontent-uws-c4=&quot;&quot;&gt;…&lt;/div&gt; intercepts pointer events
-- retrying click action, attempt #59
--   waiting 500ms
--   waiting for element to be visible, enabled and stable
--   element is visible, enabled and stable
--   scrolling into view if needed
-
-	at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:254)
-	at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:211)
-	at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:118)
-	... 44 more
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Search using Folder Checkbox)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyfileSearch">
-                  </a> <!-- verifyfileSearch -->
-                  <span class="method-name">verifyfileSearch</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;com.microsoft.playwright.Page.waitForLoadState()&quot; because &quot;viewerPage&quot; is null
-	at base.Basepage.validateViewerPage(Basepage.java:171)
-	at com.pageclasses.Homepage.searchfileinsearchbar(Homepage.java:110)
-	at testclasses.HomepageTest.verifyfileSearch(HomepageTest.java:53)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
-                  <em>
-(Search pdf in searchbar)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-packautomation-class-failed -->
           <div class="suite-packautomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -2062,15 +201,6 @@ Call log:
                   <span class="method-name">companyLogin</span>
                   <em>
 (CompanyLogin)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="contentserch">
-                  </a> <!-- contentserch -->
-                  <span class="method-name">contentserch</span>
-                  <em>
-(content search in searchdropdown)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -2152,6 +282,15 @@ Call log:
                   <span class="method-name">verifydxfleSearch</span>
                   <em>
 (Search dxf in searchbar)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyfileSearch">
+                  </a> <!-- verifyfileSearch -->
+                  <span class="method-name">verifyfileSearch</span>
+                  <em>
+(Search pdf in searchbar)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -2247,88 +386,72 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(19);
+data.addRows(15);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFileCheckboxSearch')
+data.setCell(0, 1, 'verifyFilenameSearch')
 data.setCell(0, 2, 'testclasses.HomepageTest')
-data.setCell(0, 3, 32165);
+data.setCell(0, 3, 11647);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyFolderCheckboxSearch')
+data.setCell(1, 1, 'verifyfileSearch')
 data.setCell(1, 2, 'testclasses.HomepageTest')
-data.setCell(1, 3, 32151);
+data.setCell(1, 3, 8165);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'attributesearch')
+data.setCell(2, 1, 'verifyjpgfileSearch')
 data.setCell(2, 2, 'testclasses.HomepageTest')
-data.setCell(2, 3, 17632);
+data.setCell(2, 3, 7800);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyxlsxfileSearch')
+data.setCell(3, 1, 'verifya3dfileSearch')
 data.setCell(3, 2, 'testclasses.HomepageTest')
-data.setCell(3, 3, 15079);
+data.setCell(3, 3, 7664);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyFilenameSearch')
+data.setCell(4, 1, 'verifya3dprtfileSearch')
 data.setCell(4, 2, 'testclasses.HomepageTest')
-data.setCell(4, 3, 14647);
+data.setCell(4, 3, 7199);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'contentserch')
+data.setCell(5, 1, 'verifydxfleSearch')
 data.setCell(5, 2, 'testclasses.HomepageTest')
-data.setCell(5, 3, 13892);
+data.setCell(5, 3, 7055);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifyfileSearch')
+data.setCell(6, 1, 'verifydwgfileSearch')
 data.setCell(6, 2, 'testclasses.HomepageTest')
-data.setCell(6, 3, 10445);
+data.setCell(6, 3, 7055);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifya3dfileSearch')
+data.setCell(7, 1, 'verifytiffileSearch')
 data.setCell(7, 2, 'testclasses.HomepageTest')
-data.setCell(7, 3, 10426);
+data.setCell(7, 3, 6669);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyjpgfileSearch')
+data.setCell(8, 1, 'verifyxlsxfileSearch')
 data.setCell(8, 2, 'testclasses.HomepageTest')
-data.setCell(8, 3, 8318);
+data.setCell(8, 3, 6637);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifydxfleSearch')
+data.setCell(9, 1, 'verifypptxfileSearch')
 data.setCell(9, 2, 'testclasses.HomepageTest')
-data.setCell(9, 3, 7550);
+data.setCell(9, 3, 6415);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'verifycsvfileSearch')
 data.setCell(10, 2, 'testclasses.HomepageTest')
-data.setCell(10, 3, 7472);
+data.setCell(10, 3, 6339);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifya3dprtfileSearch')
+data.setCell(11, 1, 'verifydocxfileSearch')
 data.setCell(11, 2, 'testclasses.HomepageTest')
-data.setCell(11, 3, 7252);
+data.setCell(11, 3, 6290);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifytiffileSearch')
+data.setCell(12, 1, 'verifyHomepage')
 data.setCell(12, 2, 'testclasses.HomepageTest')
-data.setCell(12, 3, 6961);
+data.setCell(12, 3, 2360);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifydwgfileSearch')
+data.setCell(13, 1, 'companyLogin')
 data.setCell(13, 2, 'testclasses.HomepageTest')
-data.setCell(13, 3, 6539);
+data.setCell(13, 3, 1874);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifypptxfileSearch')
+data.setCell(14, 1, 'userLogin')
 data.setCell(14, 2, 'testclasses.HomepageTest')
-data.setCell(14, 3, 6342);
-data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifydocxfileSearch')
-data.setCell(15, 2, 'testclasses.HomepageTest')
-data.setCell(15, 3, 6295);
-data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifyHomepage')
-data.setCell(16, 2, 'testclasses.HomepageTest')
-data.setCell(16, 3, 4100);
-data.setCell(17, 0, 17)
-data.setCell(17, 1, 'companyLogin')
-data.setCell(17, 2, 'testclasses.HomepageTest')
-data.setCell(17, 3, 1800);
-data.setCell(18, 0, 18)
-data.setCell(18, 1, 'userLogin')
-data.setCell(18, 2, 'testclasses.HomepageTest')
-data.setCell(18, 3, 151);
+data.setCell(14, 3, 150);
 window.suiteTableData['packautomation']= { tableData: data, tableDiv: 'times-div-packautomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-packautomation">
               </div> <!-- times-div-packautomation -->
             </div> <!-- times-div -->
@@ -2343,9 +466,22 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-packautomation" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">4 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testclasses.HomepageTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">attributesearch</span>
+                <br/>
+                <span class="ignored-method-name">verifyFileCheckboxSearch</span>
+                <br/>
+                <span class="ignored-method-name">verifyFolderCheckboxSearch</span>
+                <br/>
+                <span class="ignored-method-name">contentserch</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-packautomation" class="panel">
@@ -2361,91 +497,67 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">companyLogin</span>
-                <span class="method-start">17870 ms</span>
+                <span class="method-start">13981 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">userLogin</span>
-                <span class="method-start">19864 ms</span>
+                <span class="method-start">15869 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHomepage</span>
-                <span class="method-start">20015 ms</span>
+                <span class="method-start">16022 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">verifyfileSearch</span>
-                <span class="method-start">24115 ms</span>
+                <span class="method-start">18386 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifya3dfileSearch</span>
-                <span class="method-start">34735 ms</span>
+                <span class="method-start">26555 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifya3dprtfileSearch</span>
-                <span class="method-start">45177 ms</span>
+                <span class="method-start">34234 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyjpgfileSearch</span>
-                <span class="method-start">52432 ms</span>
+                <span class="method-start">41438 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifytiffileSearch</span>
-                <span class="method-start">60754 ms</span>
+                <span class="method-start">49243 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydwgfileSearch</span>
-                <span class="method-start">67719 ms</span>
+                <span class="method-start">55944 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydxfleSearch</span>
-                <span class="method-start">74262 ms</span>
+                <span class="method-start">63003 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifypptxfileSearch</span>
-                <span class="method-start">81816 ms</span>
+                <span class="method-start">70061 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyxlsxfileSearch</span>
-                <span class="method-start">88164 ms</span>
+                <span class="method-start">76484 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydocxfileSearch</span>
-                <span class="method-start">103246 ms</span>
+                <span class="method-start">83127 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifycsvfileSearch</span>
-                <span class="method-start">109544 ms</span>
+                <span class="method-start">89420 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFilenameSearch</span>
-                <span class="method-start">117022 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">attributesearch</span>
-                <span class="method-start">131674 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">contentserch</span>
-                <span class="method-start">149422 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyFileCheckboxSearch</span>
-                <span class="method-start">163317 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">verifyFolderCheckboxSearch</span>
-                <span class="method-start">195637 ms</span>
+                <span class="method-start">95765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">232072 ms</span>
+                <span class="method-start">110614 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

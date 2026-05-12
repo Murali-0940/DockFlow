@@ -43,7 +43,7 @@ public class HomepageTest extends Basepage {
     @Description("Verify that all required icons and links are visible on the main dashboard.")
     public void verifyHomepage() {
         homepage = new Homepage(page);
-        homepage.homepageiconcheck(); // 🔥 clean usage
+        homepage.verifyHomepageIcons(); // 🔥 clean usage
     }
 
     @Test(priority = 4, description = "Search pdf in searchbar")
