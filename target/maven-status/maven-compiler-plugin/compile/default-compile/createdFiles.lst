@@ -1,0 +1,6 @@
+com\pageclasses\Homepage.class
+com\pageclasses\CompLoginPage.class
+base\Basepage.class
+com\pageclasses\RoughClass.class
+com\pageclasses\UserLoginPage.class
+utils\ConfigReader.class

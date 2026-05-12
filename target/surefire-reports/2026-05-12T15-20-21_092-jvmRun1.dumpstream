@@ -1,0 +1,9 @@
+# Created at 2026-05-12T15:20:38.000
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Removing unused browser at C:\Users\DELL\AppData\Local\ms-playwright\chromium-1217'.
+
+# Created at 2026-05-12T15:20:38.016
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Removing unused browser at C:\Users\DELL\AppData\Local\ms-playwright\firefox-1511'.
+
+# Created at 2026-05-12T15:20:42.229
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream 'Removing unused browser at C:\Users\DELL\AppData\Local\ms-playwright\webkit-2272'.
+

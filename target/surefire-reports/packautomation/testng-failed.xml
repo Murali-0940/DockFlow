@@ -8,25 +8,12 @@
     <classes>
       <class name="testclasses.HomepageTest">
         <methods>
-          <include name="verifyFilenameSearch"/>
-          <include name="companyLogin"/>
+          <include name="verifyFileCheckboxSearch"/>
           <include name="attributesearch"/>
-          <include name="verifydwgfileSearch"/>
           <include name="teardown"/>
-          <include name="verifya3dfileSearch"/>
           <include name="verifyfileSearch"/>
-          <include name="contentserch"/>
-          <include name="verifydxfleSearch"/>
-          <include name="verifya3dprtfileSearch"/>
-          <include name="verifytiffileSearch"/>
-          <include name="verifycsvfileSearch"/>
-          <include name="userLogin"/>
-          <include name="verifydocxfileSearch"/>
-          <include name="verifyjpgfileSearch"/>
-          <include name="verifyHomepage"/>
-          <include name="verifyxlsxfileSearch"/>
+          <include name="verifyFolderCheckboxSearch"/>
           <include name="setup"/>
-          <include name="verifypptxfileSearch"/>
         </methods>
       </class> <!-- testclasses.HomepageTest -->
     </classes>
