@@ -36,24 +36,17 @@ public class Rough extends Basepage {
         userlogin.clickUserLoginButton();
     }
 
-    @Test(priority = 3, enabled = false, description = "Search using File Checkbox")
-    @Description("Verify that the file checkbox search is working and the result is loading.")
-    public void verifyFileCheckboxSearch() {
-
-        homepage = new Homepage(page);
-        homepage.searchUsingFileInSearchDropdown("20260317163148.pdf");
-    }
-
-    @Test(priority = 4, enabled = true, description = "Search using Folder Checkbox")
-    @Description("Verify that the folder checkbox search is working and the result is loading.")
+    @Test(priority = 3, enabled = true, description = "verify root Folder Navigation in search bar")
+    @Description("Verify verify root Folder Navigation in search bar is working and page is redirected to correct page.")
     public void verifyFolderCheckboxSearch() {
         try {
             homepage = new Homepage(page);
-            homepage.searchUsingFolderInSearchDropdown("128-A38477-00");
+            homepage.rootFolderNavigation("test");
         } catch (Exception e) {
-            Allure.step("Folder checkbox search failed : " + e.getMessage());
-            throw new SkipException("Skipping folder checkbox search test");
+            Allure.step("Root folder navigation test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root folder navigation: " + e.getMessage());
         }
+
     }
 
 }

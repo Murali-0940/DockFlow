@@ -284,19 +284,7 @@ public class Homepage extends Basepage {
         @Step("Filename Search")
         public void filenamesearch(String fileName) {
 
-                Locator searchBar = page.locator(SEARCHBAR);
-
-                searchBar.waitFor();
-
-                // Click
-                searchBar.click();
-
-                page.waitForTimeout(2000);
-
-                // Fill
-                searchBar.fill(fileName);
-
-                Allure.step("Entered attribute search text : " + fileName);
+                searchfileinsearchbar(fileName);
 
                 // Dropdown
                 page.waitForTimeout(2000);
@@ -504,6 +492,19 @@ public class Homepage extends Basepage {
                         Allure.step("Folder checkbox already selected");
                         System.out.println("Folder checkbox already selected");
                 }
+
+        }
+
+        public void rootFolderNavigation(String filename) {
+
+                searchFilename(filename);
+                selectFileCheckboxInSearchDropdown();
+                clickSearchIcon();
+                page.waitForLoadState(LoadState.NETWORKIDLE);
+                selectFirstSearchResult();
+                rootIcon();
+                page.waitForLoadState(LoadState.NETWORKIDLE);
+                page.waitForTimeout(5000);
 
         }
 }

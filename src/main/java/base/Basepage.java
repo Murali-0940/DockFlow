@@ -364,4 +364,47 @@ public class Basepage {
         System.out.println("Selected option : " + value);
     }
 
+    public void searchFilename(String fileName) {
+
+        String SEARCHBAR = "input[placeholder='Search']";
+
+        Locator searchBar = page.locator(SEARCHBAR);
+
+        searchBar.waitFor();
+
+        // Click
+        searchBar.click();
+
+        page.waitForTimeout(2000);
+
+        // Fill
+        searchBar.fill(fileName);
+
+        Allure.step("Entered attribute search text : " + fileName);
+
+        // Dropdown
+        page.waitForTimeout(2000);
+    }
+
+    public void selectFirstSearchResult() {
+        Locator firstResult = page.locator("(//div[@class='imageDiv'])[1]");
+
+        firstResult.waitFor();
+
+        firstResult.click();
+
+        Allure.step("Clicked on first search result");
+        System.out.println("Clicked on first search result");
+    }
+
+    public void rootIcon() {
+
+        Locator fileLocationIcon = page.locator("img[src='assets/go-to-location.png']");
+        fileLocationIcon.waitFor();
+
+        fileLocationIcon.evaluate("element => element.click()");
+        Allure.step("Clicked on root icon");
+        System.out.println("Clicked on root icon");
+    }
+
 }

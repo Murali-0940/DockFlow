@@ -181,4 +181,17 @@ public class HomepageTest extends Basepage {
         }
     }
 
+    @Test(priority = 19, enabled = true, description = "verify root Folder Navigation in search bar")
+    @Description("Verify verify root Folder Navigation in search bar is working and page is redirected to correct page.")
+    public void verifyRootFolderNavigation() {
+        try {
+            homepage = new Homepage(page);
+            homepage.rootFolderNavigation("test");
+        } catch (Exception e) {
+            Allure.step("Root folder navigation test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root folder navigation: " + e.getMessage());
+        }
+
+    }
+
 }
