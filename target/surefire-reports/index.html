@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-packautomation" class="navigator-link">
-              <span class="suite-name border-passed">packautomation</span>
+              <span class="suite-name border-skipped">packautomation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,31 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">19 methods,  3 skipped,  16 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-packautomation" class="hide-methods skipped suite-packautomation"> (hide)</a> <!-- hide-methods skipped suite-packautomation -->
+                      <a href="#" panel-name="suite-packautomation" class="show-methods skipped suite-packautomation"> (show)</a> <!-- show-methods skipped suite-packautomation -->
+                    </span>
+                    <div class="method-list-content skipped suite-packautomation">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="attributesearch">attributesearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyFileCheckboxSearch">verifyFileCheckboxSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="verifyFolderCheckboxSearch">verifyFolderCheckboxSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-packautomation -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,6 +128,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="companyLogin">companyLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-packautomation" title="testclasses.HomepageTest" class="method navigator-link" hash-for-method="contentserch">contentserch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -188,6 +217,56 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-packautomation" class="panel packautomation">
+          <div class="suite-packautomation-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testclasses.HomepageTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="attributesearch">
+                  </a> <!-- attributesearch -->
+                  <span class="method-name">attributesearch</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping attribute search test
+	at testclasses.HomepageTest.attributesearch(HomepageTest.java:146)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(attributes search in searchdropdown)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFileCheckboxSearch">
+                  </a> <!-- verifyFileCheckboxSearch -->
+                  <span class="method-name">verifyFileCheckboxSearch</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping file checkbox search test
+	at testclasses.HomepageTest.verifyFileCheckboxSearch(HomepageTest.java:172)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Search using File Checkbox)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyFolderCheckboxSearch">
+                  </a> <!-- verifyFolderCheckboxSearch -->
+                  <span class="method-name">verifyFolderCheckboxSearch</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping folder checkbox search test
+	at testclasses.HomepageTest.verifyFolderCheckboxSearch(HomepageTest.java:184)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 29 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Search using Folder Checkbox)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-packautomation-class-skipped -->
           <div class="suite-packautomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -201,6 +280,15 @@
                   <span class="method-name">companyLogin</span>
                   <em>
 (CompanyLogin)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="contentserch">
+                  </a> <!-- contentserch -->
+                  <span class="method-name">contentserch</span>
+                  <em>
+(content search in searchdropdown)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -386,72 +474,88 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(19);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFilenameSearch')
+data.setCell(0, 1, 'attributesearch')
 data.setCell(0, 2, 'testclasses.HomepageTest')
-data.setCell(0, 3, 11647);
+data.setCell(0, 3, 35656);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyfileSearch')
+data.setCell(1, 1, 'verifyFileCheckboxSearch')
 data.setCell(1, 2, 'testclasses.HomepageTest')
-data.setCell(1, 3, 8165);
+data.setCell(1, 3, 32183);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'verifyjpgfileSearch')
+data.setCell(2, 1, 'verifyFolderCheckboxSearch')
 data.setCell(2, 2, 'testclasses.HomepageTest')
-data.setCell(2, 3, 7800);
+data.setCell(2, 3, 32133);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifya3dfileSearch')
+data.setCell(3, 1, 'contentserch')
 data.setCell(3, 2, 'testclasses.HomepageTest')
-data.setCell(3, 3, 7664);
+data.setCell(3, 3, 16538);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifya3dprtfileSearch')
+data.setCell(4, 1, 'verifyFilenameSearch')
 data.setCell(4, 2, 'testclasses.HomepageTest')
-data.setCell(4, 3, 7199);
+data.setCell(4, 3, 12432);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifydxfleSearch')
+data.setCell(5, 1, 'verifya3dfileSearch')
 data.setCell(5, 2, 'testclasses.HomepageTest')
-data.setCell(5, 3, 7055);
+data.setCell(5, 3, 9521);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'verifydwgfileSearch')
+data.setCell(6, 1, 'verifyfileSearch')
 data.setCell(6, 2, 'testclasses.HomepageTest')
-data.setCell(6, 3, 7055);
+data.setCell(6, 3, 9008);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifytiffileSearch')
+data.setCell(7, 1, 'verifydxfleSearch')
 data.setCell(7, 2, 'testclasses.HomepageTest')
-data.setCell(7, 3, 6669);
+data.setCell(7, 3, 8300);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyxlsxfileSearch')
+data.setCell(8, 1, 'verifyjpgfileSearch')
 data.setCell(8, 2, 'testclasses.HomepageTest')
-data.setCell(8, 3, 6637);
+data.setCell(8, 3, 8259);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'verifypptxfileSearch')
+data.setCell(9, 1, 'verifycsvfileSearch')
 data.setCell(9, 2, 'testclasses.HomepageTest')
-data.setCell(9, 3, 6415);
+data.setCell(9, 3, 8010);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifycsvfileSearch')
+data.setCell(10, 1, 'verifydwgfileSearch')
 data.setCell(10, 2, 'testclasses.HomepageTest')
-data.setCell(10, 3, 6339);
+data.setCell(10, 3, 7885);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifydocxfileSearch')
+data.setCell(11, 1, 'verifyxlsxfileSearch')
 data.setCell(11, 2, 'testclasses.HomepageTest')
-data.setCell(11, 3, 6290);
+data.setCell(11, 3, 7846);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyHomepage')
+data.setCell(12, 1, 'verifypptxfileSearch')
 data.setCell(12, 2, 'testclasses.HomepageTest')
-data.setCell(12, 3, 2360);
+data.setCell(12, 3, 7676);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'companyLogin')
+data.setCell(13, 1, 'verifya3dprtfileSearch')
 data.setCell(13, 2, 'testclasses.HomepageTest')
-data.setCell(13, 3, 1874);
+data.setCell(13, 3, 7641);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'userLogin')
+data.setCell(14, 1, 'verifytiffileSearch')
 data.setCell(14, 2, 'testclasses.HomepageTest')
-data.setCell(14, 3, 150);
+data.setCell(14, 3, 7412);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifydocxfileSearch')
+data.setCell(15, 2, 'testclasses.HomepageTest')
+data.setCell(15, 3, 7145);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'verifyHomepage')
+data.setCell(16, 2, 'testclasses.HomepageTest')
+data.setCell(16, 3, 2288);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'companyLogin')
+data.setCell(17, 2, 'testclasses.HomepageTest')
+data.setCell(17, 3, 1683);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'userLogin')
+data.setCell(18, 2, 'testclasses.HomepageTest')
+data.setCell(18, 3, 181);
 window.suiteTableData['packautomation']= { tableData: data, tableDiv: 'times-div-packautomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 3 minutes</span>
               <div id="times-div-packautomation">
               </div> <!-- times-div-packautomation -->
             </div> <!-- times-div -->
@@ -466,22 +570,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-packautomation" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">4 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testclasses.HomepageTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">attributesearch</span>
-                <br/>
-                <span class="ignored-method-name">verifyFileCheckboxSearch</span>
-                <br/>
-                <span class="ignored-method-name">verifyFolderCheckboxSearch</span>
-                <br/>
-                <span class="ignored-method-name">contentserch</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-packautomation" class="panel">
@@ -497,67 +588,83 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="test-method">
                 <span class="method-name">companyLogin</span>
-                <span class="method-start">13981 ms</span>
+                <span class="method-start">11778 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">userLogin</span>
-                <span class="method-start">15869 ms</span>
+                <span class="method-start">13713 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyHomepage</span>
-                <span class="method-start">16022 ms</span>
+                <span class="method-start">13901 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyfileSearch</span>
-                <span class="method-start">18386 ms</span>
+                <span class="method-start">16195 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifya3dfileSearch</span>
-                <span class="method-start">26555 ms</span>
+                <span class="method-start">25206 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifya3dprtfileSearch</span>
-                <span class="method-start">34234 ms</span>
+                <span class="method-start">34731 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyjpgfileSearch</span>
-                <span class="method-start">41438 ms</span>
+                <span class="method-start">42377 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifytiffileSearch</span>
-                <span class="method-start">49243 ms</span>
+                <span class="method-start">50641 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydwgfileSearch</span>
-                <span class="method-start">55944 ms</span>
+                <span class="method-start">58083 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydxfleSearch</span>
-                <span class="method-start">63003 ms</span>
+                <span class="method-start">65972 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifypptxfileSearch</span>
-                <span class="method-start">70061 ms</span>
+                <span class="method-start">74282 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyxlsxfileSearch</span>
-                <span class="method-start">76484 ms</span>
+                <span class="method-start">81965 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifydocxfileSearch</span>
-                <span class="method-start">83127 ms</span>
+                <span class="method-start">89815 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifycsvfileSearch</span>
-                <span class="method-start">89420 ms</span>
+                <span class="method-start">96964 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyFilenameSearch</span>
-                <span class="method-start">95765 ms</span>
+                <span class="method-start">104979 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">attributesearch</span>
+                <span class="method-start">117415 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">contentserch</span>
+                <span class="method-start">153075 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFileCheckboxSearch</span>
+                <span class="method-start">169615 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyFolderCheckboxSearch</span>
+                <span class="method-start">201813 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">teardown</span>
-                <span class="method-start">110614 ms</span>
+                <span class="method-start">238775 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

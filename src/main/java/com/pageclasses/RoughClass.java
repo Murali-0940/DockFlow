@@ -4,16 +4,11 @@
 
 package com.pageclasses;
 
-import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 
 import base.Basepage;
 
-import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
-
 import org.openqa.selenium.WebDriver;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
 
 public class RoughClass extends Basepage {
 

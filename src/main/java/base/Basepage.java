@@ -7,6 +7,7 @@ import java.util.Arrays;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import com.microsoft.playwright.*;
+import com.microsoft.playwright.options.LoadState;
 import com.microsoft.playwright.options.WaitForSelectorState;
 
 import io.qameta.allure.Allure;
@@ -128,7 +129,12 @@ public class Basepage {
 
     public Page openFirstSearchResult() {
 
-        Locator firstResult = page.locator("xpath=(//div[@class='imageDiv'])[1]");
+        page.waitForTimeout(2000);
+
+        Locator firstResult = page.locator("(//div[@class='imageDiv'])[1]");
+
+        Allure.step("first file search result located");
+        System.out.println("first file search result located");
 
         // Check for results with a short timeout before committing
         try {
@@ -152,7 +158,7 @@ public class Basepage {
 
         Page viewerPage = page.waitForPopup(() -> firstResult.dblclick());
 
-        viewerPage.waitForLoadState();
+        viewerPage.waitForLoadState(LoadState.NETWORKIDLE);
 
         Allure.step("Opened first search result");
 
@@ -162,13 +168,98 @@ public class Basepage {
         return viewerPage;
     }
 
+    public Page openFirstSearchResult(int timeout) {
+
+        Locator firstResult = page.locator("(//div[@class='imageDiv'])[1]");
+
+        // Check for results with a short timeout before committing
+        try {
+            firstResult.waitFor(
+                    new Locator.WaitForOptions()
+                            .setState(WaitForSelectorState.VISIBLE)
+                            .setTimeout(timeout));
+        } catch (TimeoutError e) {
+            attachScreenshot("No Search Results");
+            Allure.step("⚠️ No search results found on page: " + page.url());
+            System.out.println("⚠️ No search results found : " + page.url());
+            return null;
+        }
+
+        attachScreenshot("Search Results");
+
+        Allure.step("Search results loaded successfully");
+
+        System.out.println(
+                "Search results loaded successfully : " + page.url());
+
+        Page viewerPage = page.waitForPopup(() -> firstResult.dblclick());
+
+        viewerPage.waitForLoadState(LoadState.NETWORKIDLE);
+
+        Allure.step("Opened first search result");
+
+        System.out.println(
+                "Opened first search result : " + viewerPage.url());
+
+        return viewerPage;
+    }
+
+    public Page openFirstFolder() {
+
+        Locator firstFolder = page.locator(".imageDivSmall").first();
+
+        try {
+
+            firstFolder.waitFor(
+                    new Locator.WaitForOptions()
+                            .setState(WaitForSelectorState.VISIBLE)
+                            .setTimeout(10000));
+
+            attachScreenshot("Folder Search Results");
+
+            Allure.step("Folder search results loaded successfully");
+
+            System.out.println(
+                    "Folder search results loaded successfully : " + page.url());
+
+            // Open folder
+            Page folderPage = page.waitForPopup(() -> firstFolder.dblclick());
+
+            folderPage.waitForLoadState(LoadState.NETWORKIDLE);
+
+            Allure.step("Opened first folder");
+
+            System.out.println(
+                    "Opened first folder : " + folderPage.url());
+
+            // Bring folder page to front
+            folderPage.bringToFront();
+
+            // Open first file inside folder
+            Page viewerPage = openFirstSearchResult();
+
+            // Return actual viewer page
+            return viewerPage;
+
+        } catch (TimeoutError e) {
+
+            attachScreenshot("No Folder Results");
+
+            Allure.step("⚠️ No folder results found on page: " + page.url());
+
+            System.out.println("⚠️ No folder results found : " + page.url());
+
+            return null;
+        }
+    }
+
     // ==========================================
     // Validate Viewer
     // ==========================================
 
     public void validateViewerPage(Page viewerPage) {
 
-        viewerPage.waitForLoadState();
+        viewerPage.waitForLoadState(LoadState.NETWORKIDLE);
 
         String currentUrl = viewerPage.url();
 

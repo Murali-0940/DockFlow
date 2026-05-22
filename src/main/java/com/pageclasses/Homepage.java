@@ -364,13 +364,13 @@ public class Homepage extends Basepage {
 
                 clickSearchIcon();
 
-                page.waitForLoadState();
+                page.waitForLoadState(LoadState.NETWORKIDLE);
 
                 // ==========================================
                 // Step 5 - Open Search Result
                 // ==========================================
 
-                Page viewerPage = openFirstSearchResult();
+                Page viewerPage = openFirstSearchResult(30000);
 
                 validateViewerPage(viewerPage);
 
@@ -446,58 +446,64 @@ public class Homepage extends Basepage {
                 page.waitForLoadState();
 
                 // Open Search Result
+                openFirstFolder();
+
                 Page viewerPage = openFirstSearchResult();
-
                 validateViewerPage(viewerPage);
-
                 closeViewerAndReturn(viewerPage);
-
-                // Navigate Homepage
                 alfadocklogo();
 
         }
 
-        String filecheckbox = "//p-checkbox[@value='File']//div[contains(@class,'ui-chkbox-box')]";
+        public void selectFileCheckboxInSearchDropdown() {
 
-        private void selectFileCheckboxInSearchDropdown() {
+                Locator filecheckbox = page.locator("xpath=//label[text()='FileType']/following::label[text()='File']");
 
-                Locator checkbox = page.locator(filecheckbox);
+                Allure.step("File checkbox is visible in search dropdown");
+                System.out.println("File checkbox is visible in search dropdown");
 
-                checkbox.waitFor();
+                String classes = filecheckbox.getAttribute("class");
+                System.out.println("File checkbox classes: " + classes);
 
-                String classes = checkbox.getAttribute("class");
+                if (classes == null || !classes.contains("ui-label-active")) {
 
-                if (!classes.contains("ui-state-active")) {
+                        page.waitForTimeout(3000);
 
-                        checkbox.click();
+                        filecheckbox.evaluate("element => element.click()");
 
                         Allure.step("File checkbox selected in search dropdown");
+                        System.out.println("File checkbox selected in search dropdown");
 
                 } else {
 
                         Allure.step("File checkbox already selected");
+                        System.out.println("File checkbox already selected");
                 }
         }
 
-        String foldercheckbox = "//p-checkbox[@value='Folder']//div[contains(@class,'ui-chkbox-box')]";
+        public void selectFolderCheckboxInSearchDropdown() {
 
-        private void selectFolderCheckboxInSearchDropdown() {
+                Locator folderCheckbox = page
+                                .locator("xpath=//label[text()='FileType']/following::label[text()='Folder']");
 
-                Locator checkbox = page.locator(foldercheckbox);
+                Allure.step("Folder checkbox is visible in search dropdown");
+                System.out.println("Folder checkbox is visible in search dropdown");
+                String classes = folderCheckbox.getAttribute("class");
 
-                checkbox.waitFor();
+                if (classes == null || !classes.contains("ui-label-active")) {
 
-                String classes = checkbox.getAttribute("class");
+                        page.waitForTimeout(3000);
 
-                if (!classes.contains("ui-state-active")) {
-
-                        checkbox.click();
+                        folderCheckbox.evaluate("element => element.click()");
 
                         Allure.step("Folder checkbox selected in search dropdown");
+                        System.out.println("Folder checkbox selected in search dropdown");
 
                 } else {
 
                         Allure.step("Folder checkbox already selected");
+                        System.out.println("Folder checkbox already selected");
                 }
+
         }
 }
