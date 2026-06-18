@@ -5,12 +5,13 @@
     <classes>
       <class name="testclasses.HomepageTest">
         <methods>
-          <include name="companyLogin"/>
-          <include name="setup"/>
-          <include name="userLogin"/>
-          <include name="verifyPDFSearch"/>
-          <include name="verifyHomepage"/>
+          <include name="verifyFileCheckboxSearch"/>
+          <include name="attributesearch"/>
           <include name="teardown"/>
+          <include name="verifyRootFileLocation"/>
+          <include name="verifyRootFileDownload"/>
+          <include name="verifyFolderCheckboxSearch"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- testclasses.HomepageTest -->
     </classes>

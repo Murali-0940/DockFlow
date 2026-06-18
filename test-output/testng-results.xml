@@ -1,33 +1,335 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="22" passed="17" failed="1" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-05-04T11:28:25 IST" name="Default suite" finished-at="2026-05-04T11:28:42 IST" duration-ms="16954">
+  <suite started-at="2026-06-09T18:33:23 IST" name="Default suite" finished-at="2026-06-09T18:38:37 IST" duration-ms="313673">
     <groups>
     </groups>
-    <test started-at="2026-05-04T11:28:25 IST" name="Default test" finished-at="2026-05-04T11:28:42 IST" duration-ms="16954">
+    <test started-at="2026-06-09T18:33:23 IST" name="Default test" finished-at="2026-06-09T18:38:37 IST" duration-ms="313673">
       <class name="testclasses.HomepageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:10 IST" name="setup" finished-at="2026-05-04T11:28:25 IST" duration-ms="15225" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:10 IST" name="setup" finished-at="2026-06-09T18:33:23 IST" duration-ms="13511" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="companyLogin()[pri:1, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:25 IST" name="companyLogin" description="CompanyLogin" finished-at="2026-05-04T11:28:27 IST" duration-ms="2149" status="PASS">
+        <test-method signature="companyLogin()[pri:1, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:23 IST" name="companyLogin" description="CompanyLogin" finished-at="2026-06-09T18:33:25 IST" duration-ms="1665" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- companyLogin -->
-        <test-method signature="userLogin()[pri:2, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:28 IST" name="userLogin" description="userLogin" finished-at="2026-05-04T11:28:28 IST" duration-ms="148" status="PASS">
+        <test-method signature="userLogin()[pri:2, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:25 IST" name="userLogin" description="userLogin" finished-at="2026-06-09T18:33:25 IST" duration-ms="143" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- userLogin -->
-        <test-method signature="verifyHomepage()[pri:3, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:28 IST" name="verifyHomepage" description="Verify Homepage Icons" finished-at="2026-05-04T11:28:34 IST" duration-ms="6450" status="PASS">
+        <test-method signature="verifyHomepage()[pri:3, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:25 IST" name="verifyHomepage" description="Verify Homepage Icons" finished-at="2026-06-09T18:33:28 IST" duration-ms="2280" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepage -->
-        <test-method signature="verifyPDFSearch()[pri:4, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:34 IST" name="verifyPDFSearch" description="Search in searchbar" finished-at="2026-05-04T11:28:42 IST" duration-ms="7885" status="PASS">
+        <test-method signature="verifyfileSearch()[pri:4, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:28 IST" name="verifyfileSearch" description="Search pdf in searchbar" finished-at="2026-06-09T18:33:38 IST" duration-ms="10345" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyPDFSearch -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.HomepageTest@1023150a]" started-at="2026-05-04T11:28:42 IST" name="teardown" finished-at="2026-05-04T11:28:43 IST" duration-ms="300" status="PASS">
+        </test-method> <!-- verifyfileSearch -->
+        <test-method signature="verifya3dfileSearch()[pri:5, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:38 IST" name="verifya3dfileSearch" description="Search a3dasm in searchbar" finished-at="2026-06-09T18:33:48 IST" duration-ms="10003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifya3dfileSearch -->
+        <test-method signature="verifya3dprtfileSearch()[pri:6, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:48 IST" name="verifya3dprtfileSearch" description="Search a3dprt in searchbar" finished-at="2026-06-09T18:33:56 IST" duration-ms="8369" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifya3dprtfileSearch -->
+        <test-method signature="verifyjpgfileSearch()[pri:7, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:33:56 IST" name="verifyjpgfileSearch" description="Search jpg in searchbar" finished-at="2026-06-09T18:34:05 IST" duration-ms="8606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyjpgfileSearch -->
+        <test-method signature="verifytiffileSearch()[pri:7, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:05 IST" name="verifytiffileSearch" description="Search tiff in searchbar" finished-at="2026-06-09T18:34:13 IST" duration-ms="8033" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifytiffileSearch -->
+        <test-method signature="verifydwgfileSearch()[pri:8, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:13 IST" name="verifydwgfileSearch" description="Search dwg in searchbar" finished-at="2026-06-09T18:34:21 IST" duration-ms="8006" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydwgfileSearch -->
+        <test-method signature="verifydxfleSearch()[pri:9, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:21 IST" name="verifydxfleSearch" description="Search dxf in searchbar" finished-at="2026-06-09T18:34:30 IST" duration-ms="9002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydxfleSearch -->
+        <test-method signature="verifypptxfileSearch()[pri:10, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:30 IST" name="verifypptxfileSearch" description="Search pptx in searchbar" finished-at="2026-06-09T18:34:38 IST" duration-ms="8481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifypptxfileSearch -->
+        <test-method signature="verifyxlsxfileSearch()[pri:11, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:38 IST" name="verifyxlsxfileSearch" description="Search xlsx in searchbar" finished-at="2026-06-09T18:34:48 IST" duration-ms="9776" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyxlsxfileSearch -->
+        <test-method signature="verifydocxfileSearch()[pri:12, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:48 IST" name="verifydocxfileSearch" description="Search docx in searchbar" finished-at="2026-06-09T18:34:57 IST" duration-ms="8534" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydocxfileSearch -->
+        <test-method signature="verifycsvfileSearch()[pri:13, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:34:57 IST" name="verifycsvfileSearch" description="Search csv in searchbar" finished-at="2026-06-09T18:35:05 IST" duration-ms="8113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifycsvfileSearch -->
+        <test-method signature="verifyFilenameSearch()[pri:14, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:35:05 IST" name="verifyFilenameSearch" description="Filename Search in searchdropdown" finished-at="2026-06-09T18:35:20 IST" duration-ms="15147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFilenameSearch -->
+        <test-method signature="attributesearch()[pri:15, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:35:20 IST" name="attributesearch" description="attributes search in searchdropdown" finished-at="2026-06-09T18:35:56 IST" duration-ms="36101" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping attribute search test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping attribute search test
+at testclasses.HomepageTest.attributesearch(HomepageTest.java:146)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- attributesearch -->
+        <test-method signature="contentserch()[pri:16, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:35:56 IST" name="contentserch" description="content search in searchdropdown" finished-at="2026-06-09T18:36:10 IST" duration-ms="14063" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentserch -->
+        <test-method signature="verifyFileCheckboxSearch()[pri:17, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:36:10 IST" name="verifyFileCheckboxSearch" description="Search using File Checkbox" finished-at="2026-06-09T18:36:31 IST" duration-ms="20982" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "com.microsoft.playwright.Page.waitForLoadState(com.microsoft.playwright.options.LoadState)" because "viewerPage" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "com.microsoft.playwright.Page.waitForLoadState(com.microsoft.playwright.options.LoadState)" because "viewerPage" is null
+at base.Basepage.validateViewerPage(Basepage.java:262)
+at com.pageclasses.Homepage.searchUsingFileInSearchDropdown(Homepage.java:398)
+at testclasses.HomepageTest.verifyFileCheckboxSearch(HomepageTest.java:169)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFileCheckboxSearch -->
+        <test-method signature="verifyFolderCheckboxSearch()[pri:18, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:36:31 IST" name="verifyFolderCheckboxSearch" description="Search using Folder Checkbox" finished-at="2026-06-09T18:37:03 IST" duration-ms="31053" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping folder checkbox search test]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping folder checkbox search test
+at testclasses.HomepageTest.verifyFolderCheckboxSearch(HomepageTest.java:180)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFolderCheckboxSearch -->
+        <test-method signature="verifyRootFileDownload()[pri:19, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:37:03 IST" name="verifyRootFileDownload" description="verify root file download" finished-at="2026-06-09T18:37:45 IST" duration-ms="42506" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping test due to failure in root file download: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\progress.js:78:26)
+    at Frame.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\frames.js:619:23)
+    at FrameDispatcher.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\frameDispatcher.js:106:103)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator("xpath=(//div[@class='imageDiv'])[1]") to be visible
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping test due to failure in root file download: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\progress.js:78:26)
+    at Frame.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\frames.js:619:23)
+    at FrameDispatcher.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\frameDispatcher.js:106:103)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator("xpath=(//div[@class='imageDiv'])[1]") to be visible
+
+at testclasses.HomepageTest.verifyRootFileDownload(HomepageTest.java:192)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRootFileDownload -->
+        <test-method signature="verifyRootFileLocation()[pri:20, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:37:45 IST" name="verifyRootFileLocation" description="verify root file location" finished-at="2026-06-09T18:38:27 IST" duration-ms="42283" status="SKIP">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping test due to failure in root file location: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\progress.js:78:26)
+    at Frame.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\frames.js:619:23)
+    at FrameDispatcher.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\frameDispatcher.js:106:103)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator("xpath=(//div[@class='imageDiv'])[1]") to be visible
+]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping test due to failure in root file location: Error {
+  message='Timeout 30000ms exceeded.
+  name='TimeoutError
+  stack='TimeoutError: Timeout 30000ms exceeded.
+    at ProgressController.run (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\progress.js:78:26)
+    at Frame.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\frames.js:619:23)
+    at FrameDispatcher.waitForSelector (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\frameDispatcher.js:106:103)
+    at FrameDispatcher._handleCommand (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:94:40)
+    at DispatcherConnection.dispatch (C:\Users\DELL\AppData\Local\Temp\playwright-java-309718618531492938\package\lib\server\dispatchers\dispatcher.js:361:39)
+}
+Call log:
+- waiting for locator("xpath=(//div[@class='imageDiv'])[1]") to be visible
+
+at testclasses.HomepageTest.verifyRootFileLocation(HomepageTest.java:205)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRootFileLocation -->
+        <test-method signature="verifyFileSearchCount()[pri:21, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:38:27 IST" name="verifyFileSearchCount" description="Search File Count" finished-at="2026-06-09T18:38:37 IST" duration-ms="9485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyFileSearchCount -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:testclasses.HomepageTest@6ffa56fa]" started-at="2026-06-09T18:38:43 IST" name="teardown" finished-at="2026-06-09T18:38:43 IST" duration-ms="384" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

@@ -23,488 +23,514 @@ import io.qameta.allure.Step;
 
 public class Homepage extends Basepage {
 
-        public WebDriver driver;
+	public WebDriver driver;
 
-        public Homepage(Page page) {
-                Homepage.page = page;
-        }
+	public Homepage(Page page) {
+		Homepage.page = page;
+	}
 
-        // ==========================================
-        // Locators
-        // ==========================================
+	// ==========================================
+	// Locators
+	// ==========================================
 
-        private static final String HYPERLINK = "xpath=//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
+	private static final String HYPERLINK = "xpath=//h4[text()='HyperLink']/preceding::input[contains(@src,'hyperLink')]";
 
-        private static final String DRAWINGMGMT = "xpath=//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
+	private static final String DRAWINGMGMT = "xpath=//h4[text()='Drawing Management']/preceding::img[contains(@src,'Digital')]";
 
-        private static final String SOFTWARELIB = "xpath=//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
+	private static final String SOFTWARELIB = "xpath=//h4[text()='Software Library']/preceding::input[contains(@src,'Gaia')]";
 
-        private static final String ALFAOFFICE = "xpath=//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
+	private static final String ALFAOFFICE = "xpath=//h4[text()='alfa Office']/preceding::input[contains(@src,'alfa Office')]";
 
-        private static final String ALFACALENDER = "xpath=//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
+	private static final String ALFACALENDER = "xpath=//h4[text()='alfaCalendar']/preceding::input[contains(@src,'calender')]";
 
-        private static final String SETTINGS = "xpath=//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
+	private static final String SETTINGS = "xpath=//h4[text()='Settings']/preceding::input[contains(@src,'Setting')]";
 
-        private static final String SEARCHBAR = "input[placeholder='Search']";
+	private static final String SEARCHBAR = "input[placeholder='Search']";
 
-        private static final String SEARCHICON = "xpath=(//img[contains(@src,'ai-search')])[1]";
+	private static final String SEARCHICON = "xpath=(//img[contains(@src,'ai-search')])[1]";
 
-        private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
+	private static final String LOGOUTICON = "div[class*='user_login'] i[class*='sign-out']";
 
-        private static final String ALFADOCKLOGO = "img[src*='logo']";
+	private static final String ALFADOCKLOGO = "img[src*='logo']";
 
-        private static final String SEARCHDROPDOWN = "xpath=//input[@placeholder='Search']/following::button[@icon='fa-caret-down'][1]";
+	private static final String SEARCHDROPDOWN = "xpath=//input[@placeholder='Search']/following::button[@icon='fa-caret-down'][1]";
 
-        // ==========================================
-        // Homepage Icon Validation
-        // ==========================================
+	// ==========================================
+	// Homepage Icon Validation
+	// ==========================================
 
-        @Step("Verify Homepage Icons")
-        public void verifyHomepageIcons() {
+	@Step("Verify Homepage Icons")
+	public void verifyHomepageIcons() {
 
-                page.waitForLoadState(LoadState.DOMCONTENTLOADED);
+		page.waitForLoadState(LoadState.DOMCONTENTLOADED);
 
-                Map<String, String> homepageIcons = new LinkedHashMap<>();
+		Map<String, String> homepageIcons = new LinkedHashMap<>();
 
-                homepageIcons.put("HyperLink", HYPERLINK);
-                homepageIcons.put("Drawing Management", DRAWINGMGMT);
-                homepageIcons.put("Software Library", SOFTWARELIB);
-                homepageIcons.put("alfa Office", ALFAOFFICE);
-                homepageIcons.put("alfaCalendar", ALFACALENDER);
-                homepageIcons.put("Settings", SETTINGS);
-                homepageIcons.put("Search Bar", SEARCHBAR);
-                homepageIcons.put("Search Icon", SEARCHICON);
-                homepageIcons.put("Logout Icon", LOGOUTICON);
-                homepageIcons.put("alfaDOCK Logo", ALFADOCKLOGO);
+		homepageIcons.put("HyperLink", HYPERLINK);
+		homepageIcons.put("Drawing Management", DRAWINGMGMT);
+		homepageIcons.put("Software Library", SOFTWARELIB);
+		homepageIcons.put("alfa Office", ALFAOFFICE);
+		homepageIcons.put("alfaCalendar", ALFACALENDER);
+		homepageIcons.put("Settings", SETTINGS);
+		homepageIcons.put("Search Bar", SEARCHBAR);
+		homepageIcons.put("Search Icon", SEARCHICON);
+		homepageIcons.put("Logout Icon", LOGOUTICON);
+		homepageIcons.put("alfaDOCK Logo", ALFADOCKLOGO);
 
-                for (Map.Entry<String, String> entry : homepageIcons.entrySet()) {
+		for (Map.Entry<String, String> entry : homepageIcons.entrySet()) {
 
-                        String elementName = entry.getKey();
-                        String locatorValue = entry.getValue();
+			String elementName = entry.getKey();
+			String locatorValue = entry.getValue();
 
-                        Locator element = page.locator(locatorValue);
+			Locator element = page.locator(locatorValue);
 
-                        try {
+			try {
 
-                                element.waitFor(new Locator.WaitForOptions()
-                                                .setState(WaitForSelectorState.VISIBLE)
-                                                .setTimeout(10000));
+				element.waitFor(new Locator.WaitForOptions().setState(WaitForSelectorState.VISIBLE).setTimeout(10000));
 
-                                assertThat(element).isVisible();
+				assertThat(element).isVisible();
 
-                                Allure.step("Verified : " + elementName);
+				Allure.step("Verified : " + elementName);
 
-                                System.out.println("Verified : " + elementName);
+				System.out.println("Verified : " + elementName);
 
-                        } catch (Exception e) {
+			} catch (Exception e) {
 
-                                Allure.step("Failed : " + elementName);
+				Allure.step("Failed : " + elementName);
 
-                                System.out.println("Failed : " + elementName);
+				System.out.println("Failed : " + elementName);
 
-                                throw new RuntimeException(
-                                                "Homepage element not visible : " + elementName,
-                                                e);
-                        }
-                }
-        }
+				throw new RuntimeException("Homepage element not visible : " + elementName, e);
+			}
+		}
+	}
 
-        // ==========================================
-        // File Search
-        // ==========================================
+	// ==========================================
+	// File Search
+	// ==========================================
 
-        @Step("Search File")
-        public void searchfileinsearchbar(String fileName) {
+	@Step("Search File")
+	public void searchfileinsearchbar(String fileName) {
 
-                Locator searchBar = page.locator(SEARCHBAR);
+		Locator searchBar = page.locator(SEARCHBAR);
 
-                searchBar.waitFor();
+		searchBar.waitFor();
 
-                // Remove readonly
-                searchBar.evaluate("element => element.removeAttribute('readonly')");
+		// Remove readonly
+		searchBar.evaluate("element => element.removeAttribute('readonly')");
 
-                // Click
-                searchBar.evaluate("element => element.click()");
+		// Click
+		searchBar.evaluate("element => element.click()");
 
-                // Fill value
-                searchBar.fill(fileName);
+		// Fill value
+		searchBar.fill(fileName);
 
-                Allure.step("Entered file name : " + fileName);
+		Allure.step("Entered file name : " + fileName);
 
-                // Search
-                searchBar.press("Enter");
+		// Search
+		searchBar.press("Enter");
 
-                Allure.step("clicked enter button.");
+		Allure.step("clicked enter button.");
 
-                page.waitForLoadState();
+		page.waitForLoadState();
 
-                Page viewerPage = openFirstSearchResult();
+		Page viewerPage = openFirstSearchResult();
 
-                validateViewerPage(viewerPage);
+		validateViewerPage(viewerPage);
 
-                closeViewerAndReturn(viewerPage);
+		closeViewerAndReturn(viewerPage);
 
-                alfadocklogo();
-        }
+		alfadocklogo();
+	}
 
-        private static final String FILENAME_FILTER = "//label[normalize-space()='Filename']";
-        private static final String ATTRIBUTES_FILTER = "//label[normalize-space()='Attributes']";
-        private static final String CONTENT_FILTER = "//label[normalize-space()='Content']";
+	private static final String FILENAME_FILTER = "//label[normalize-space()='Filename']";
+	private static final String ATTRIBUTES_FILTER = "//label[normalize-space()='Attributes']";
+	private static final String CONTENT_FILTER = "//label[normalize-space()='Content']";
 
-        private boolean isSearchFilterEnabled(String filterLabel) {
+	private boolean isSearchFilterEnabled(String filterLabel) {
 
-                Locator label = page.locator(filterLabel);
+		Locator label = page.locator(filterLabel);
 
-                label.waitFor();
+		label.waitFor();
 
-                String inputId = (String) label.evaluate("element => element.getAttribute('for')");
+		String inputId = (String) label.evaluate("element => element.getAttribute('for')");
 
-                if (inputId == null || inputId.isBlank()) {
-                        return label.locator("xpath=..").locator("svg").isVisible();
-                }
+		if (inputId == null || inputId.isBlank()) {
+			return label.locator("xpath=..").locator("svg").isVisible();
+		}
 
-                return (boolean) page.locator("#" + inputId).evaluate("element => element.checked");
-        }
+		return (boolean) page.locator("#" + inputId).evaluate("element => element.checked");
+	}
 
-        private void clickSearchFilter(String filterLabel) {
+	private void clickSearchFilter(String filterLabel) {
 
-                Locator label = page.locator(filterLabel);
+		Locator label = page.locator(filterLabel);
 
-                label.waitFor();
+		label.waitFor();
 
-                String inputId = (String) label.evaluate("element => element.getAttribute('for')");
+		String inputId = (String) label.evaluate("element => element.getAttribute('for')");
 
-                if (inputId == null || inputId.isBlank()) {
-                        label.evaluate("element => element.click()");
-                        return;
-                }
+		if (inputId == null || inputId.isBlank()) {
+			label.evaluate("element => element.click()");
+			return;
+		}
 
-                page.locator("#" + inputId).evaluate("element => element.click()");
-        }
+		page.locator("#" + inputId).evaluate("element => element.click()");
+	}
 
-        public void selectSearchFilter(String filterName) {
+	public void selectSearchFilter(String filterName) {
 
-                switch (filterName.toLowerCase()) {
+		switch (filterName.toLowerCase()) {
 
-                        case "filename":
+		case "filename":
 
-                                // Enable Filename if not enabled
-                                if (!isSearchFilterEnabled(FILENAME_FILTER)) {
-                                        clickSearchFilter(FILENAME_FILTER);
-                                        Allure.step("Filename checkbox enabled");
-                                }
+			// Enable Filename if not enabled
+			if (!isSearchFilterEnabled(FILENAME_FILTER)) {
+				clickSearchFilter(FILENAME_FILTER);
+				Allure.step("Filename checkbox enabled");
+			}
 
-                                // Disable Attributes if enabled
-                                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                                        clickSearchFilter(ATTRIBUTES_FILTER);
-                                        Allure.step("Attributes checkbox disabled");
-                                }
+			// Disable Attributes if enabled
+			if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+				clickSearchFilter(ATTRIBUTES_FILTER);
+				Allure.step("Attributes checkbox disabled");
+			}
 
-                                // Disable Content if enabled
-                                if (isSearchFilterEnabled(CONTENT_FILTER)) {
-                                        clickSearchFilter(CONTENT_FILTER);
-                                        Allure.step("Content checkbox disabled");
-                                }
+			// Disable Content if enabled
+			if (isSearchFilterEnabled(CONTENT_FILTER)) {
+				clickSearchFilter(CONTENT_FILTER);
+				Allure.step("Content checkbox disabled");
+			}
 
-                                break;
+			break;
 
-                        case "attributes":
+		case "attributes":
 
-                                // Enable Attributes
-                                if (!isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                                        clickSearchFilter(ATTRIBUTES_FILTER);
-                                        Allure.step("Attributes checkbox enabled");
-                                }
+			// Enable Attributes
+			if (!isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+				clickSearchFilter(ATTRIBUTES_FILTER);
+				Allure.step("Attributes checkbox enabled");
+			}
 
-                                // Disable Filename
-                                if (isSearchFilterEnabled(FILENAME_FILTER)) {
-                                        clickSearchFilter(FILENAME_FILTER);
-                                        Allure.step("Filename checkbox disabled");
-                                }
+			// Disable Filename
+			if (isSearchFilterEnabled(FILENAME_FILTER)) {
+				clickSearchFilter(FILENAME_FILTER);
+				Allure.step("Filename checkbox disabled");
+			}
 
-                                // Disable Content
-                                if (isSearchFilterEnabled(CONTENT_FILTER)) {
-                                        clickSearchFilter(CONTENT_FILTER);
-                                        Allure.step("Content checkbox disabled");
-                                }
+			// Disable Content
+			if (isSearchFilterEnabled(CONTENT_FILTER)) {
+				clickSearchFilter(CONTENT_FILTER);
+				Allure.step("Content checkbox disabled");
+			}
 
-                                break;
+			break;
 
-                        case "content":
+		case "content":
 
-                                // Enable Content
-                                if (!isSearchFilterEnabled(CONTENT_FILTER)) {
-                                        clickSearchFilter(CONTENT_FILTER);
-                                        Allure.step("Content checkbox enabled");
-                                }
+			// Enable Content
+			if (!isSearchFilterEnabled(CONTENT_FILTER)) {
+				clickSearchFilter(CONTENT_FILTER);
+				Allure.step("Content checkbox enabled");
+			}
 
-                                // Disable Filename
-                                if (isSearchFilterEnabled(FILENAME_FILTER)) {
-                                        clickSearchFilter(FILENAME_FILTER);
-                                        Allure.step("Filename checkbox disabled");
-                                }
+			// Disable Filename
+			if (isSearchFilterEnabled(FILENAME_FILTER)) {
+				clickSearchFilter(FILENAME_FILTER);
+				Allure.step("Filename checkbox disabled");
+			}
 
-                                // Disable Attributes
-                                if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
-                                        clickSearchFilter(ATTRIBUTES_FILTER);
-                                        Allure.step("Attributes checkbox disabled");
-                                }
+			// Disable Attributes
+			if (isSearchFilterEnabled(ATTRIBUTES_FILTER)) {
+				clickSearchFilter(ATTRIBUTES_FILTER);
+				Allure.step("Attributes checkbox disabled");
+			}
 
-                                break;
+			break;
 
-                        default:
-                                throw new IllegalArgumentException("Invalid filter name: " + filterName);
-                }
-        }
+		default:
+			throw new IllegalArgumentException("Invalid filter name: " + filterName);
+		}
+	}
 
-        private void clickSearchIcon() {
+	private void clickSearchIcon() {
 
-                Locator searchIcon = page.locator(SEARCHICON).first();
+		Locator searchIcon = page.locator(SEARCHICON).first();
 
-                searchIcon.waitFor();
+		searchIcon.waitFor();
 
-                searchIcon.scrollIntoViewIfNeeded();
+		searchIcon.scrollIntoViewIfNeeded();
 
-                searchIcon.evaluate("element => (element.closest('button, a, [role=\"button\"]') || element).click()");
+		searchIcon.evaluate("element => (element.closest('button, a, [role=\"button\"]') || element).click()");
 
-                Allure.step("Clicked search icon");
-        }
+		Allure.step("Clicked search icon");
+	}
 
-        private void openSearchDropdown() {
+	private void openSearchDropdown() {
 
-                Locator searchDropdown = page.locator(SEARCHDROPDOWN).first();
+		Locator searchDropdown = page.locator(SEARCHDROPDOWN).first();
 
-                searchDropdown.waitFor();
+		searchDropdown.waitFor();
 
-                searchDropdown.evaluate("element => element.click()");
+		searchDropdown.evaluate("element => element.click()");
 
-                Allure.step("Opened search dropdown");
-        }
+		Allure.step("Opened search dropdown");
+	}
 
-        @Step("Filename Search")
-        public void filenamesearch(String fileName) {
+	@Step("Filename Search")
+	public void filenamesearch(String fileName) {
 
-                searchfileinsearchbar(fileName);
+		searchfileinsearchbar(fileName);
 
-                // Dropdown
-                page.waitForTimeout(2000);
+		// Dropdown
+		page.waitForTimeout(2000);
 
-                openSearchDropdown();
+		openSearchDropdown();
 
-                page.waitForTimeout(2000);
+		page.waitForTimeout(2000);
 
-                selectSearchFilter("filename");
+		selectSearchFilter("filename");
 
-                // Search icon
-                clickSearchIcon();
+		// Search icon
+		clickSearchIcon();
 
-                page.waitForLoadState();
+		page.waitForLoadState();
 
-                Page viewerPage = openFirstSearchResult();
+		Page viewerPage = openFirstSearchResult();
 
-                validateViewerPage(viewerPage);
+		validateViewerPage(viewerPage);
 
-                closeViewerAndReturn(viewerPage);
+		closeViewerAndReturn(viewerPage);
 
-                alfadocklogo();
-        }
+		alfadocklogo();
+	}
 
-        @Step("Search File Using Filter")
-        public void searchUsingFilter(String fileName, String filterName) {
+	@Step("Search File Using Filter")
+	public void searchUsingFilter(String fileName, String filterName) {
 
-                // ==========================================
-                // Step 1 - Search Bar
-                // ==========================================
+		// ==========================================
+		// Step 1 - Search Bar
+		// ==========================================
 
-                Locator searchBar = page.locator(SEARCHBAR);
+		Locator searchBar = page.locator(SEARCHBAR);
 
-                searchBar.waitFor();
+		searchBar.waitFor();
 
-                // Click search bar
-                searchBar.click();
+		// Click search bar
+		searchBar.click();
 
-                page.waitForTimeout(2000);
+		page.waitForTimeout(2000);
 
-                // Enter filename
-                searchBar.fill(fileName);
+		// Enter filename
+		searchBar.fill(fileName);
 
-                Allure.step("Entered search text : " + fileName);
+		Allure.step("Entered search text : " + fileName);
 
-                // ==========================================
-                // Step 2 - Open Dropdown
-                // ==========================================
+		// ==========================================
+		// Step 2 - Open Dropdown
+		// ==========================================
 
-                openSearchDropdown();
+		openSearchDropdown();
 
-                page.waitForTimeout(2000);
+		page.waitForTimeout(2000);
 
-                // ==========================================
-                // Step 3 - Select Filter
-                // ==========================================
+		// ==========================================
+		// Step 3 - Select Filter
+		// ==========================================
 
-                selectSearchFilter(filterName);
+		selectSearchFilter(filterName);
 
-                page.waitForTimeout(1000);
+		page.waitForTimeout(1000);
 
-                // ==========================================
-                // Step 4 - Click Search Icon
-                // ==========================================
+		// ==========================================
+		// Step 4 - Click Search Icon
+		// ==========================================
 
-                clickSearchIcon();
+		clickSearchIcon();
 
-                page.waitForLoadState(LoadState.NETWORKIDLE);
+		page.waitForLoadState(LoadState.NETWORKIDLE);
 
-                // ==========================================
-                // Step 5 - Open Search Result
-                // ==========================================
+		// ==========================================
+		// Step 5 - Open Search Result
+		// ==========================================
 
-                Page viewerPage = openFirstSearchResult(30000);
+		Page viewerPage = openFirstSearchResult(30000);
 
-                validateViewerPage(viewerPage);
+		validateViewerPage(viewerPage);
 
-                closeViewerAndReturn(viewerPage);
+		closeViewerAndReturn(viewerPage);
 
-                // ==========================================
-                // Step 6 - Navigate Homepage
-                // ==========================================
+		// ==========================================
+		// Step 6 - Navigate Homepage
+		// ==========================================
 
-                alfadocklogo();
-        }
+		alfadocklogo();
+	}
 
-        @Step("Search File Using Filter")
-        public void searchUsingFileInSearchDropdown(String fileName) {
-                // Click search bar
-                page.locator(SEARCHBAR).click();
+	@Step("Search File Using Filter")
+	public void searchUsingFileInSearchDropdown(String fileName) {
+		// Click search bar
+		page.locator(SEARCHBAR).click();
 
-                // Enter filename
-                page.locator(SEARCHBAR).fill(fileName);
+		// Enter filename
+		page.locator(SEARCHBAR).fill(fileName);
 
-                Allure.step("Entered search text : " + fileName);
+		Allure.step("Entered search text : " + fileName);
 
-                // Open Dropdown
-                openSearchDropdown();
+		// Open Dropdown
+		openSearchDropdown();
 
-                page.waitForTimeout(2000);
+		page.waitForTimeout(2000);
 
-                // Select File or Folder
-                selectFileCheckboxInSearchDropdown();
+		// Select File or Folder
+		selectFileCheckboxInSearchDropdown();
 
-                page.waitForTimeout(3000);
+		page.waitForTimeout(3000);
 
-                // Click Search Icon
-                clickSearchIcon();
+		// Click Search Icon
+		clickSearchIcon();
 
-                page.waitForLoadState();
+		page.waitForLoadState();
 
-                // Open Search Result
-                Page viewerPage = openFirstSearchResult();
+		// Open Search Result
+		Page viewerPage = openFirstSearchResult();
 
-                validateViewerPage(viewerPage);
+		validateViewerPage(viewerPage);
 
-                closeViewerAndReturn(viewerPage);
+		closeViewerAndReturn(viewerPage);
 
-                // Navigate Homepage
-                alfadocklogo();
+		// Navigate Homepage
+		alfadocklogo();
 
-        }
+	}
 
-        @Step("Search folder Using Filter")
-        public void searchUsingFolderInSearchDropdown(String fileName) {
-                // Click search bar
-                page.locator(SEARCHBAR).click();
+	@Step("Search folder Using Filter")
+	public void searchUsingFolderInSearchDropdown(String fileName) {
+		// Click search bar
+		page.locator(SEARCHBAR).click();
 
-                // Enter filename
-                page.locator(SEARCHBAR).fill(fileName);
+		// Enter filename
+		page.locator(SEARCHBAR).fill(fileName);
 
-                Allure.step("Entered search text : " + fileName);
+		Allure.step("Entered search text : " + fileName);
 
-                // Open Dropdown
-                openSearchDropdown();
+		// Open Dropdown
+		openSearchDropdown();
 
-                page.waitForTimeout(2000);
+		page.waitForTimeout(2000);
 
-                // Select File or Folder
-                selectFolderCheckboxInSearchDropdown();
+		// Select File or Folder
+		selectFolderCheckboxInSearchDropdown();
 
-                page.waitForTimeout(3000);
+		page.waitForTimeout(3000);
 
-                // Click Search Icon
-                clickSearchIcon();
+		// Click Search Icon
+		clickSearchIcon();
 
-                page.waitForLoadState();
+		page.waitForLoadState();
 
-                // Open Search Result
-                openFirstFolder();
+		// Open Search Result
+		openFirstFolder();
 
-                Page viewerPage = openFirstSearchResult();
-                validateViewerPage(viewerPage);
-                closeViewerAndReturn(viewerPage);
-                alfadocklogo();
+		Page viewerPage = openFirstSearchResult();
+		validateViewerPage(viewerPage);
+		closeViewerAndReturn(viewerPage);
+		alfadocklogo();
 
-        }
+	}
 
-        public void selectFileCheckboxInSearchDropdown() {
+	public void selectFileCheckboxInSearchDropdown() {
 
-                Locator filecheckbox = page.locator("xpath=//label[text()='FileType']/following::label[text()='File']");
+		Locator filecheckbox = page.locator("xpath=//label[text()='FileType']/following::label[text()='File']");
 
-                Allure.step("File checkbox is visible in search dropdown");
-                System.out.println("File checkbox is visible in search dropdown");
+		Allure.step("File checkbox is visible in search dropdown");
+		System.out.println("File checkbox is visible in search dropdown");
 
-                String classes = filecheckbox.getAttribute("class");
-                System.out.println("File checkbox classes: " + classes);
+		String classes = filecheckbox.getAttribute("class");
+		System.out.println("File checkbox classes: " + classes);
 
-                if (classes == null || !classes.contains("ui-label-active")) {
+		if (classes == null || !classes.contains("ui-label-active")) {
 
-                        page.waitForTimeout(3000);
+			page.waitForTimeout(3000);
 
-                        filecheckbox.evaluate("element => element.click()");
+			filecheckbox.evaluate("element => element.click()");
 
-                        Allure.step("File checkbox selected in search dropdown");
-                        System.out.println("File checkbox selected in search dropdown");
+			Allure.step("File checkbox selected in search dropdown");
+			System.out.println("File checkbox selected in search dropdown");
 
-                } else {
+		} else {
 
-                        Allure.step("File checkbox already selected");
-                        System.out.println("File checkbox already selected");
-                }
-        }
+			Allure.step("File checkbox already selected");
+			System.out.println("File checkbox already selected");
+		}
+	}
 
-        public void selectFolderCheckboxInSearchDropdown() {
+	public void selectFolderCheckboxInSearchDropdown() {
 
-                Locator folderCheckbox = page
-                                .locator("xpath=//label[text()='FileType']/following::label[text()='Folder']");
+		Locator folderCheckbox = page.locator("xpath=//label[text()='FileType']/following::label[text()='Folder']");
 
-                Allure.step("Folder checkbox is visible in search dropdown");
-                System.out.println("Folder checkbox is visible in search dropdown");
-                String classes = folderCheckbox.getAttribute("class");
+		Allure.step("Folder checkbox is visible in search dropdown");
+		System.out.println("Folder checkbox is visible in search dropdown");
+		String classes = folderCheckbox.getAttribute("class");
 
-                if (classes == null || !classes.contains("ui-label-active")) {
+		if (classes == null || !classes.contains("ui-label-active")) {
 
-                        page.waitForTimeout(3000);
+			page.waitForTimeout(3000);
 
-                        folderCheckbox.evaluate("element => element.click()");
+			folderCheckbox.evaluate("element => element.click()");
 
-                        Allure.step("Folder checkbox selected in search dropdown");
-                        System.out.println("Folder checkbox selected in search dropdown");
+			Allure.step("Folder checkbox selected in search dropdown");
+			System.out.println("Folder checkbox selected in search dropdown");
 
-                } else {
+		} else {
 
-                        Allure.step("Folder checkbox already selected");
-                        System.out.println("Folder checkbox already selected");
-                }
+			Allure.step("Folder checkbox already selected");
+			System.out.println("Folder checkbox already selected");
+		}
 
-        }
+	}
 
-        public void rootFolderNavigation(String filename) {
+	public void rootFolderNavigation(String filename) {
 
-                searchFilename(filename);
-                selectFileCheckboxInSearchDropdown();
-                clickSearchIcon();
-                page.waitForLoadState(LoadState.NETWORKIDLE);
-                selectFirstSearchResult();
-                rootIcon();
-                page.waitForLoadState(LoadState.NETWORKIDLE);
-                page.waitForTimeout(5000);
+		searchFilename(filename);
+		selectFileCheckboxInSearchDropdown();
+		clickSearchIcon();
+		page.waitForTimeout(5000);
+		page.waitForLoadState(LoadState.NETWORKIDLE);
+		selectFirstSearchResult();
+		rootIcon();
+		page.waitForLoadState(LoadState.NETWORKIDLE);
+		page.waitForTimeout(5000);
 
-        }
+	}
+
+	public void downloadSearchedFile(String filename) {
+
+		searchFilename(filename);
+		selectFileCheckboxInSearchDropdown();
+		clickSearchIcon();
+		page.waitForLoadState(LoadState.NETWORKIDLE);
+		page.waitForTimeout(5000);
+		selectFirstSearchResult();
+		downloadFile();
+		page.waitForLoadState(LoadState.NETWORKIDLE);
+		page.waitForTimeout(5000);
+
+	}
+
+	public void fileSearchCount(String filename) {
+
+		searchFilename(filename);
+		selectFileCheckboxInSearchDropdown();
+		clickSearchIcon();
+		page.waitForTimeout(5000);
+		page.waitForLoadState(LoadState.NETWORKIDLE);
+		String totalFilesText = page.locator("//td[contains(text(),'Total Files-')]").textContent().trim();
+
+		int totalFiles = Integer.parseInt(totalFilesText.replace("Total Files-", "").trim());
+
+		System.out.println("Total Files Count: " + totalFiles);
+
+	}
+
 }

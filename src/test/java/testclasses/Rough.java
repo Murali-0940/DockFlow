@@ -36,17 +36,19 @@ public class Rough extends Basepage {
         userlogin.clickUserLoginButton();
     }
 
-    @Test(priority = 3, enabled = true, description = "verify root Folder Navigation in search bar")
-    @Description("Verify verify root Folder Navigation in search bar is working and page is redirected to correct page.")
-    public void verifyFolderCheckboxSearch() {
+    @Test(priority = 3, enabled = true, description = "Search File Count")
+    @Description("Verify file search count")
+    public void verifyFileSearchCount() {
         try {
             homepage = new Homepage(page);
-            homepage.rootFolderNavigation("test");
+            homepage.fileSearchCount("2026");
         } catch (Exception e) {
-            Allure.step("Root folder navigation test failed: " + e.getMessage());
-            throw new SkipException("Skipping test due to failure in root folder navigation: " + e.getMessage());
+            Allure.step("Root file download test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root file download: " + e.getMessage());
         }
 
     }
+    
+    
 
 }

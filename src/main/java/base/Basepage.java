@@ -406,5 +406,19 @@ public class Basepage {
         Allure.step("Clicked on root icon");
         System.out.println("Clicked on root icon");
     }
+    
+    public void downloadFile() {
+		String DOWNLOADBUTTON = "xpath=//img[@src='assets/go-to-location.png']/preceding::img[@src='assets/ai-download.png']";
+
+		Locator downloadButton = page.locator(DOWNLOADBUTTON);
+
+		downloadButton.waitFor();
+
+		downloadButton.evaluate("element => element.click()");
+
+		Allure.step("Clicked on download button");
+		System.out.println("Clicked on download button");
+    }
+    
 
 }

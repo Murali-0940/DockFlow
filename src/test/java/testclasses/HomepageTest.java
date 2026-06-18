@@ -181,17 +181,45 @@ public class HomepageTest extends Basepage {
         }
     }
 
-    @Test(priority = 19, enabled = true, description = "verify root Folder Navigation in search bar")
-    @Description("Verify verify root Folder Navigation in search bar is working and page is redirected to correct page.")
-    public void verifyRootFolderNavigation() {
+    @Test(priority = 19, enabled = true, description = "verify root file download")
+    @Description("Verify root file download")
+    public void verifyRootFileDownload() {
         try {
             homepage = new Homepage(page);
-            homepage.rootFolderNavigation("test");
+            homepage.downloadSearchedFile("20260317163148.pdf");
         } catch (Exception e) {
-            Allure.step("Root folder navigation test failed: " + e.getMessage());
-            throw new SkipException("Skipping test due to failure in root folder navigation: " + e.getMessage());
+            Allure.step("Root file download test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root file download: " + e.getMessage());
         }
 
     }
+    
+    @Test(priority = 20, enabled = true, description = "verify root file location")
+    @Description("Verify root file location")
+    public void verifyRootFileLocation() {
+        try {
+            homepage = new Homepage(page);
+            homepage.rootFolderNavigation("20260317163148.pdf");
+        } catch (Exception e) {
+            Allure.step("Root file location test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root file location: " + e.getMessage());
+        }
+
+    }
+    
+    @Test(priority = 21, enabled = true, description = "Search File Count")
+    @Description("Verify file search count")
+    public void verifyFileSearchCount() {
+        try {
+            homepage = new Homepage(page);
+            homepage.fileSearchCount("2026");
+        } catch (Exception e) {
+            Allure.step("Root file download test failed: " + e.getMessage());
+            throw new SkipException("Skipping test due to failure in root file download: " + e.getMessage());
+        }
+
+    }
+    
+    
 
 }
